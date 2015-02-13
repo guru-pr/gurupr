@@ -23,3 +23,6 @@ rails server
 - ~~Melhorar~~ Fazer o layout
 - Adicionar eventos
 - Mini administração para eventos
+- Melhorar specs
+- Travis!
+- Codeclimate!
