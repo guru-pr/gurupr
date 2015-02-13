@@ -42,6 +42,7 @@ group :test do
   # Specs
   gem 'rspec-rails'
   gem 'shoulda'
+  gem 'factory_girl_rails'
 end
 
 group :production do
