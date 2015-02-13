@@ -1,9 +1,9 @@
 <h1>welcome#index</h1>
 
+<h2>Members <a name="members"></a></h2>
+
 <ul>
-  <% if user_signed_in? %>
-  <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-  <% else %>
-  <li><%= link_to 'Join', join_path %></li>
-  <% end %>
+<% @members.each do |user| %>
+  <li><%= user.name %> (<%= link_to 'github', "http://github.com/#{user.nickname}", target: '_blank' %>)</li>
+<% end %>
 </ul>
