@@ -1,0 +1,9 @@
+<h1>welcome#index</h1>
+
+<ul>
+  <% if user_signed_in? %>
+  <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to 'Join', join_path %></li>
+  <% end %>
+</ul>
