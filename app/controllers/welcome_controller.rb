@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @members = User.order(:name)
+    # TODO: Many '@', improvement is need
+    @members    = User.order(:name)
+    @next_event = Event.not_happened.first
   end
 end
