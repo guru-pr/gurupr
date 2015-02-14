@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'existent user' do
-      create(:valid_user)
+      create(:user)
       expect { User.find_or_create_with_omniauth(auth) }.to change(User, :count).by(0)
     end
   end
