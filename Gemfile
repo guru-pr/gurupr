@@ -47,6 +47,9 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
+
+  # Coverage
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :production do
