@@ -4,11 +4,11 @@ FactoryGirl.define do
     local       'local'
     address     'address'
 
-    factory :happened do
+    factory :event_happened do
       occurred_at { 1.year.ago }
     end
 
-    factory :not_happened do
+    factory :event_not_happened do
       occurred_at { 1.year.from_now }
     end
   end

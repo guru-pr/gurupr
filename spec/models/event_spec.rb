@@ -11,8 +11,8 @@ RSpec.describe Event, type: :model do
   it { expect(described_class.respond_to?(:friendly)).to eq true }
 
   context '.not_happened' do
-    let!(:happened)     { create(:happened) }
-    let!(:not_happened) { create(:not_happened) }
+    let!(:happened)     { create(:event_happened) }
+    let!(:not_happened) { create(:event_not_happened) }
 
     it 'only one event' do
       expect(Event.not_happened.count).to eq 1

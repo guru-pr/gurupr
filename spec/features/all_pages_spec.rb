@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'All pages' do
-  let!(:event)  { create(:not_happened) }
+  let!(:event)  { create(:event_not_happened) }
   let!(:member) { create(:user) }
 
   context 'Welcome' do
