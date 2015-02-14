@@ -1,4 +1,4 @@
-# GURU-PR
+# GURU-PR [![Code Climate](https://codeclimate.com/github/guru-pr/gurupr/badges/gpa.svg)](https://codeclimate.com/github/guru-pr/gurupr)
 
 Site do Grupo de Usuários Ruby do Paraná!
 
