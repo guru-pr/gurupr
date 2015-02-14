@@ -47,6 +47,7 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
+  gem 'capybara'
 
   # Coverage
   gem 'codeclimate-test-reporter', require: nil
