@@ -8,6 +8,5 @@ class Event < ActiveRecord::Base
   validates :local,       presence: true
   validates :address,     presence: true
 
-  default_scope { order(occurred_at: :asc) }
-  scope :not_happened, -> { where('occurred_at > ?', Time.zone.now) }
+  scope :not_happened, -> { where('occurred_at > ?', Time.zone.now).order(occurred_at: :asc) }
 end
