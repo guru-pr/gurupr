@@ -21,8 +21,12 @@ rails server
 ## TODO
 
 - ~~Melhorar~~ Fazer o layout
-- Adicionar eventos
+- Configurar timezone para `Brasilia` 
 - Mini administração para eventos
 - Melhorar specs
 - Travis!
 - Codeclimate!
+
+## Feito
+
+- ~~Adicionar eventos~~
