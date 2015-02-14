@@ -1,0 +1,8 @@
+<div class="row">
+  <h3>Members <a name="members"></a></h3>
+    <% @members.each do |user| %>
+      <div class="col-lg-2">
+        <%= user.name %> (<%= link_to 'github', "http://github.com/#{user.nickname}", target: '_blank' %>)
+      </div>
+  <% end %>
+</div>
