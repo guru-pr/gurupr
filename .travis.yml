@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.2.0
+addons:
+  postgresql: '9.3'
+script:
+- bundle exec rake db:migrate RAILS_ENV=test
+- bundle exec rspec
+before_script:
+- psql -c 'create database gurupr_test;' -U postgres
