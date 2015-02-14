@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   validates :nickname, presence: true
   validates :image,    presence: true
 
+  scope :admin,  -> { where(admin: true) }
+  scope :normal, -> { where(admin: false) }
+
   def self.find_or_create_with_omniauth(auth)
     find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|
       user.name     = auth.info.name

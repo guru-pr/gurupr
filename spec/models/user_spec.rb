@@ -10,6 +10,40 @@ RSpec.describe User, type: :model do
   it { is_expected.to validate_presence_of(:nickname) }
   it { is_expected.to validate_presence_of(:image) }
 
+  context 'scopes' do
+    let!(:normal) { create(:user) }
+    let!(:admin)  { create(:user_admin) }
+
+    context '.admin' do
+
+      it 'only one user' do
+        expect(User.admin.count).to eq 1
+      end
+
+      it 'dont include normal users' do
+        expect(User.admin).to_not include(normal)
+      end
+
+      it 'include admin users' do
+        expect(User.admin).to include(admin)
+      end
+    end
+
+    context '.normal' do
+      it 'only one user' do
+        expect(User.normal.count).to eq 1
+      end
+
+      it 'dont include admin users' do
+        expect(User.normal).to_not include(admin)
+      end
+
+      it 'include normal users' do
+        expect(User.normal).to include(normal)
+      end
+    end
+  end
+
   context '.find_or_create_with_omniauth' do
     let(:info) { OpenStruct.new(email: 'email@user.com', name: 'Email User', nickname: 'nickname-user', image: 'http://placehold.it/300') }
     let(:auth) { OpenStruct.new(uid: '1', info: info, provider: 'github') }

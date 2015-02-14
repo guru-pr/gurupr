@@ -6,5 +6,10 @@ FactoryGirl.define do
     email 'valid@user.net'
     nickname 'valid-user'
     image 'http://placehold.it/300'
+
+    factory :user_admin do
+      uid '2'
+      admin true
+    end
   end
 end
