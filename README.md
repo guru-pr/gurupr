@@ -23,11 +23,11 @@ rails server
 - ~~Melhorar~~ Fazer o layout
 - Adicionar [ribbon](https://github.com/blog/273-github-ribbons)
 - Configurar timezone para `Brasilia`
-- Mini administração para eventos
 - Melhorar specs
 
 ## Feito
 
+- ~~Mini administração para eventos~~
 - ~~Adicionar eventos~~
 - ~~Travis!~~
 - ~~Codeclimate!~~
