@@ -1,24 +1,24 @@
 module Omniauth
   module Mock
-    def auth_mock
+    def auth_mock(user)
       OmniAuth.config.mock_auth[:github] = OpenStruct.new(
         provider: 'github',
-        uid: '2',
+        uid: user.uid,
         info: OpenStruct.new(
-          email: 'email@user.com',
-          name: 'Email User',
-          nickname: 'nickname-user',
-          image: 'http://placehold.it/300'
+          email: user.email,
+          name: user.name,
+          nickname: user.nickname,
+          image: user.image
         )
       )
     end
   end
 
   module SessionHelpers
-    def sign_in
+    def sign_in(user)
       visit '/'
       expect(page).to have_content("Join")
-      auth_mock
+      auth_mock(user)
       click_link "Join"
     end
   end
