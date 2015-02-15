@@ -1,7 +1,7 @@
 module Admin
   class EventsController < ApplicationController
     before_action :authenticate_admin!
-    before_action :set_event, only: [:edit, :update]
+    before_action :set_event, only: [:edit, :update, :destroy]
 
     def index
       @events = Event.order(occurred_at: :asc)
@@ -44,6 +44,13 @@ module Admin
         else
           format.html { render :edit }
         end
+      end
+    end
+
+    def destroy
+      @event.destroy
+      respond_to do |format|
+        format.html { redirect_to admin_events_path }
       end
     end
 

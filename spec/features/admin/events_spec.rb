@@ -62,5 +62,15 @@ feature 'Admin events', :omniauth do
       expect(page).to have_content 'Local #1.1'
       expect(page).to have_content 'Address #1.1'
     end
+
+    scenario 'destroy event' do
+      event = create(:event_happened)
+
+      visit '/admin/events'
+
+      click_link 'Delete'
+
+      expect(page).to_not have_content event.name
+    end
   end
 end

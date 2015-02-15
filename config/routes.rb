@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resource :accesses, only: [:create, :destroy]
     end
 
-    resources :events, only: [:index, :new, :create, :edit, :update]
+    resources :events, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   root 'welcome#index'
