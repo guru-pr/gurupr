@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <th>
+      <td>Name</td>
+      <td>Local</td>
+      <td>Address</td>
+      <td>Occurred at</td>
+      <td></td>
+    </th>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.local %></td>
+      <td><%= event.address %></td>
+      <td><%= event.occurred_at %></td>
+      <td></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

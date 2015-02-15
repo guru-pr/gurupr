@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :users, only: [:index] do
       resource :accesses, only: [:create, :destroy]
     end
+
+    resources :events, only: [:index]
   end
 
   root 'welcome#index'
