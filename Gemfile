@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Auth
 gem 'omniauth-github'
 
+# Friendly forms
+gem 'simple_form'
+
 # Slug
 gem 'friendly_id'
 
