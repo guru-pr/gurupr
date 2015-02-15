@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   helper_method :user_signed_in?
+  helper_method :authenticate_admin!
 
   private
 
@@ -14,6 +15,14 @@ class ApplicationController < ActionController::Base
     rescue Exception => e
       nil
     end
+  end
+
+  def admin_signed_in?
+    user_signed_in? and current_user.admin?
+  end
+
+  def authenticate_admin!
+    redirect_to :root unless admin_signed_in?
   end
 
   def user_signed_in?
