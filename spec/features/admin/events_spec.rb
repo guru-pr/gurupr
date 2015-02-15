@@ -46,5 +46,21 @@ feature 'Admin events', :omniauth do
       expect(page).to have_content 'Event #1'
       expect(page).to have_content 'Local #1'
     end
+
+    scenario 'edit event' do
+      event = create(:event_happened)
+
+      visit "/admin/events/#{event.slug}/edit"
+
+      fill_in 'event_name',        with: 'Event #1.1'
+      fill_in 'event_local',       with: 'Local #1.1'
+      fill_in 'event_address',     with: 'Address #1.1'
+
+      click_button 'Update Event'
+
+      expect(page).to have_content 'Event #1.1'
+      expect(page).to have_content 'Local #1.1'
+      expect(page).to have_content 'Address #1.1'
+    end
   end
 end

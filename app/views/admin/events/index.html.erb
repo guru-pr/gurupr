@@ -15,7 +15,7 @@
       <td><%= event.local %></td>
       <td><%= event.address %></td>
       <td><%= event.occurred_at %></td>
-      <td></td>
+      <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
     </tr>
     <% end %>
   </tbody>
