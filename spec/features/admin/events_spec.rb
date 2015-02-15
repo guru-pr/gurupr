@@ -28,6 +28,23 @@ feature 'Admin events', :omniauth do
         expect(page).to have_content happened.send(field)
         expect(page).to have_content not_happened.send(field)
       end
+
+      expect(page).to have_content 'New event'
+    end
+
+    scenario 'add new event' do
+      visit '/admin/events/new'
+
+      fill_in 'event_name',        with: 'Event #1'
+      fill_in 'event_local',       with: 'Local #1'
+      fill_in 'event_address',     with: 'Address #1'
+      fill_in 'event_occurred_at', with: Time.zone.now
+      fill_in 'event_description', with: 'Oh bla dih, oh bla dah'
+
+      click_button 'Create Event'
+
+      expect(page).to have_content 'Event #1'
+      expect(page).to have_content 'Local #1'
     end
   end
 end
