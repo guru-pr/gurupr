@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Join', :omniauth do
   scenario 'user can join using valid credentials' do
-    sign_in
+    sign_in(create(:user))
 
     expect(page).to have_content 'Logout'
   end
