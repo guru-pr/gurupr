@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Local</th>
+      <th>Address</th>
+      <th>Occurred at</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.local %></td>
+      <td><%= event.address %></td>
+      <td><%= event.occurred_at %></td>
+      <td>
+        <%= link_to 'Edit', edit_admin_event_path(event) %>
+        <%= link_to 'Delete', [:admin, event], method: :delete %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New event', new_admin_event_path %>

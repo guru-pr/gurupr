@@ -6,5 +6,13 @@ Rails.application.routes.draw do
 
   resources :events, only: :show
 
+  namespace :admin do
+    resources :users, only: [:index] do
+      resource :accesses, only: [:create, :destroy]
+    end
+
+    resources :events, only: [:index, :new, :create, :edit, :update, :destroy]
+  end
+
   root 'welcome#index'
 end

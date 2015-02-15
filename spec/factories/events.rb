@@ -1,14 +1,17 @@
 FactoryGirl.define do
   factory :event do
-    name        'name'
+    name        'event'
     local       'local'
     address     'address'
+    occurred_at { Time.zone.now }
 
-    factory :happened do
+    factory :event_happened do
+      name 'event happened'
       occurred_at { 1.year.ago }
     end
 
-    factory :not_happened do
+    factory :event_not_happened do
+      name 'event not happened'
       occurred_at { 1.year.from_now }
     end
   end

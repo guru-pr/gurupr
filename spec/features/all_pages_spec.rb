@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe 'All pages' do
-  let!(:event)  { create(:not_happened) }
-  let!(:member) { create(:valid_user) }
+  let!(:event)  { create(:event_not_happened) }
+  let!(:member) { create(:user) }
 
   context 'Welcome' do
     it 'Exists next event' do

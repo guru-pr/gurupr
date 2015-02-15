@@ -1,0 +1,10 @@
+<%= simple_form_for([:admin, @event], html: { class: 'form-horizontal' }) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :local %>
+    <%= f.input :address %>
+    <%= f.input :occurred_at, as: :text %>
+    <%= f.input :description %>
+
+    <%= f.submit %>
+    <%= link_to :back %>
+<% end %>
