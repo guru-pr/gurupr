@@ -4,6 +4,7 @@ FactoryGirl.define do
     local       'local'
     address     'address'
     occurred_at { Time.zone.now }
+    description '<p>description</p>'
 
     factory :event_happened do
       name 'event happened'

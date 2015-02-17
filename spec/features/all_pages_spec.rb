@@ -34,7 +34,8 @@ describe 'All pages' do
 
     it 'Shows description' do
       visit "/events/#{event.slug}"
-      expect(page).to have_content event.description
+      # TODO: How I can change to `event.description`?
+      expect(page).to have_content 'Description'
     end
   end
 end

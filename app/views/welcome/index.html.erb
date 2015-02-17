@@ -11,7 +11,7 @@
     <strong>Local</strong> <%= @next_event.local %> (<%= link_to 'mapa', "https://www.google.com.br/maps/search/#{@next_event.address}", target: '_blank' %>)
   </p>
   <p>
-    <strong>Description</strong> <%= @next_event.description %>
+    <strong>Description</strong> <%= @next_event.description.html_safe %>
   </p>
 <% end %>
 
