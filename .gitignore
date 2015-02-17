@@ -14,7 +14,7 @@
 
 .env
 
--coverage
+coverage
 
 *.swp
 
