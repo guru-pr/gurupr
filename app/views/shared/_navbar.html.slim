@@ -1,0 +1,8 @@
+/! shared/navbar
+ul
+  li = link_to 'Members', "/#members"
+  - if user_signed_in?
+    li = link_to 'Logout', logout_path, method: :delete
+  - else
+    li = link_to 'Join', join_path
+/! shared/navbar

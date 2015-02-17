@@ -17,11 +17,5 @@ html lang="#{I18n.locale}"
       = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
 
   body
-    ul
-      li = link_to 'Members', "/#members"
-      - if user_signed_in?
-        li = link_to 'Logout', logout_path, method: :delete
-      - else
-        li = link_to 'Join', join_path
-
+    = render 'shared/navbar'
     = yield
