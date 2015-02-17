@@ -15,4 +15,13 @@ feature 'Join', :omniauth do
 
     expect(page).to_not have_content 'Logout'
   end
+
+  scenario 'user can not join using invalid session' do
+    sign_in(create(:user))
+    expect(User).to receive(:find).and_raise(:exception)
+
+    visit '/'
+
+    expect(page).to_not have_content 'Logout'
+  end
 end
