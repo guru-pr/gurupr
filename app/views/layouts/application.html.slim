@@ -1,0 +1,27 @@
+doctype 5
+html lang="#{I18n.locale}"
+
+  head
+    title guru-pr :: grupo de usuários ruby do paraná
+
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+
+    = stylesheet_link_tag    :application, media: :all, 'data-turbolinks-track' => true
+    = javascript_include_tag :application, 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+    / [if lt IE 9]
+      = javascript_include_tag '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'
+      = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
+
+  body
+    ul
+      li = link_to 'Members', "/#members"
+      - if user_signed_in?
+        li = link_to 'Logout', logout_path, method: :delete
+      - else
+        li = link_to 'Join', join_path
+
+    = yield
