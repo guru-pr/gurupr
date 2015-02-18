@@ -1,20 +1,5 @@
 = content_for :header
   = render 'events/banner', event: @event
 
-h1
-  = link_to @event.name, @event
-
-p
-  strong
-    | Date
-  = @event.occurred_at
-
-p
-  strong
-    | Local
-  = @event.local
-
-p
-  strong
-    | Description
-  = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@event.description || '').html_safe
+= @event.local_map
+= @event.description
