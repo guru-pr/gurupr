@@ -6,5 +6,5 @@
   <strong>Local</strong> <%= @event.local %> (<%= link_to 'mapa', "https://www.google.com.br/maps/search/#{@event.address}", target: '_blank' %>)
 </p>
 <p>
-  <strong>Description</strong> <%= @event.description %>
+  <strong>Description</strong> <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@event.description || '').html_safe %>
 </p>

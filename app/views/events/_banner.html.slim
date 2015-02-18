@@ -14,5 +14,6 @@
             = link_to t('.register'), event, class: 'btn btn-success'
 
   .description
-    = event.description
+    - unless event.description.blank?
+      = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(event.description).html_safe
 /! events/banner
