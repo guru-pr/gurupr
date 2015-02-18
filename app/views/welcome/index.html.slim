@@ -1,3 +1,7 @@
+= content_for :header
+  - if @next_event
+    = render 'events/banner', event: @next_event
+
 h3
   = t(".members")
 

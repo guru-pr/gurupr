@@ -1,3 +1,6 @@
+= content_for :header
+  = render 'events/banner', event: @event
+
 h1
   = link_to @event.name, @event
 
