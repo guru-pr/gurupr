@@ -13,6 +13,10 @@ class EventDecorator < ApplicationDecorator
     end
   end
 
+  def summary
+    render_markdown object.summary
+  end
+
   def description
     render_markdown object.description
   end
