@@ -37,6 +37,9 @@ gem 'simple_form'
 # Slug
 gem 'friendly_id'
 
+# Collenction of locale settings
+gem 'rails-i18n', '~> 4.0.0'
+
 group :development, :test do
   # Environment variables
   gem 'dotenv-rails'
