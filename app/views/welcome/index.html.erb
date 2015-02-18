@@ -14,11 +14,3 @@
     <strong>Description</strong> <%= @next_event.description.html_safe %>
   </p>
 <% end %>
-
-<h3>Members <a name="members"></a></h3>
-
-<ul>
-<% @members.each do |user| %>
-  <li><%= user.name %> (<%= link_to 'github', "http://github.com/#{user.nickname}", target: '_blank' %>)</li>
-<% end %>
-</ul>

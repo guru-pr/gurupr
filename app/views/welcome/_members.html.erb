@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-lg-2">
+		<h3>Members <a name="members"></a></h3>
+	</div>
+</div>
+
+<div class="row">  
+<% @members.each do |member|%>
+  <div class="col-lg-3">
+    <%= link_to "http://github.com/#{member.name}", target: '_blank' do %>
+      <%= image_tag "http://placehold.it/100", alt: 'Teste', class: 'member_image' %>
+    <% end %>
+    <p><%= link_to member.name, "http://github.com/#{member.name}", target: '_blank' %></p>
+   </div>
+   <% end %>
+</div>
