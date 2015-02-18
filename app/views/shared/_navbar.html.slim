@@ -8,7 +8,7 @@ nav.navbar.navbar-default
     ul.nav.navbar-nav.navbar-right
       li = link_to t('.members'), "/#members"
       - if user_signed_in?
-        li = link_to 'Logout', logout_path, method: :delete
+        li = link_to t('.exit'), logout_path, method: :delete
       - else
         li
           = link_to join_path do
