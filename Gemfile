@@ -28,6 +28,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails', '~> 4.3.0'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.2.2'
+gem 'draper', '~> 1.4.0'
 
 # Auth
 gem 'omniauth-github'

@@ -74,6 +74,11 @@ GEM
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
+    draper (1.4.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.3.0)
     factory_girl (4.5.0)
@@ -171,6 +176,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     redcarpet (3.2.2)
+    request_store (1.1.0)
     rspec-core (3.2.0)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.0)
@@ -257,6 +263,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   dotenv-rails
+  draper (~> 1.4.0)
   factory_girl_rails
   font-awesome-rails (~> 4.3.0)
   friendly_id
