@@ -20,6 +20,8 @@ html lang="#{I18n.locale}"
     = render 'shared/navbar'
 
     .image-header
+      - if @next_event
+        = render 'events/banner', event: @next_event
 
     .row
       .container
