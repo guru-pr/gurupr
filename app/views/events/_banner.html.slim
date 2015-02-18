@@ -1,3 +1,4 @@
+- event = event.decorate unless event.decorated?
 /! events/banner
 .event-banner
   .page-header
@@ -5,16 +6,12 @@
       = event.name
       small
         ul.list-inline
-          li.occurred
-            = fa_icon 'calendar', text: l(event.occurred_at)
-          li.local
-            = link_to "https://www.google.com.br/maps/search/#{event.address}", target: '_blank' do
-              = fa_icon 'map-marker', text: event.local
+          li.occurred = event.occurred_at
+          li.local = event.local
 
   .description
-    - unless event.description.blank?
-      = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(event.description).html_safe
+    = event.description
 
   .text-center
-    = link_to t('.more_details'), event, class: 'btn btn-success'
+    = event.details_link
 /! events/banner
