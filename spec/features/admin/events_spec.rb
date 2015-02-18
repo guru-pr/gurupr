@@ -39,6 +39,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_local',       with: 'Local #1'
       fill_in 'event_address',     with: 'Address #1'
       fill_in 'event_occurred_at', with: Time.zone.now
+      fill_in 'event_summary',     with: 'Oh bla dih, oh bla dah'
       fill_in 'event_description', with: 'Oh bla dih, oh bla dah'
 
       click_button create_text(Event)
