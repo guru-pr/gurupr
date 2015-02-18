@@ -1,0 +1,30 @@
+.event-banner {
+  @extend .container;
+
+  padding: 5px 0;
+
+  .page-header {
+    margin: 20px 0 20px;
+    border-bottom: 1px solid $navbar-default-bg;
+  }
+
+  h1 {
+    $default-margin: 15px 0;
+    margin: $default-margin;
+
+    small {
+      ul {
+        margin: $default-margin;
+      }
+    }
+  }
+
+  .local > * {
+    color: #777777;
+  }
+
+  .description {
+    font-size: $font-size-h3;
+    font-weight: lighter;
+  }
+}

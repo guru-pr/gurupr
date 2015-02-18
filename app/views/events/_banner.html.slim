@@ -1,0 +1,18 @@
+/! events/banner
+.event-banner
+  .page-header
+    h1
+      = event.name
+      small
+        ul.list-inline
+          li.occurred
+            = fa_icon 'calendar', text: l(event.occurred_at)
+          li.local
+            = link_to "https://www.google.com.br/maps/search/#{event.address}", target: '_blank' do
+              = fa_icon 'map-marker', text: event.local
+          li.pull-right
+            = link_to t('.register'), event, class: 'btn btn-success'
+
+  .description
+    = event.description
+/! events/banner
