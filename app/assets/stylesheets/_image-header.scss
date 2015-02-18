@@ -1,0 +1,20 @@
+// image-header.scss
+$image-header-height: 400px;
+
+.image-header {
+  @extend .row;
+
+  height: $image-header-height;
+  margin-top: -20px;
+  color: $body-bg;
+
+  background-image: url(http://www.gsccc.org.sg/portal/en/templates/gracechurc/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.image-header.small {
+  height: $image-header-height / 2;
+}
+// image-header.scss
