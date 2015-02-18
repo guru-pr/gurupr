@@ -15,6 +15,14 @@ $image-header-height: 400px;
 }
 
 .image-header.small {
-  height: $image-header-height / 2;
+  height: $image-header-height / 3.3;
+
+  .page-header {
+    border: 0;
+  }
+
+  .summary, .btn {
+    visibility: hidden;
+  }
 }
 // image-header.scss
