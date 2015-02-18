@@ -28,3 +28,7 @@ html lang="#{I18n.locale}"
     .row
       .container
         = yield
+
+    .row
+      .container
+        = render 'shared/members_grid', members: @members
