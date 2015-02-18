@@ -42,9 +42,9 @@ module Omniauth
 
     def sign_in(user)
       visit '/'
-      expect(page).to have_content("Join")
+      expect(page).to have_content(login_text)
       auth_mock(user)
-      click_link "Join"
+      click_link login_text
     end
   end
 end

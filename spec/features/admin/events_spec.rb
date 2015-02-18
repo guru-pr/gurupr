@@ -41,7 +41,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_occurred_at', with: Time.zone.now
       fill_in 'event_description', with: 'Oh bla dih, oh bla dah'
 
-      click_button 'Create Event'
+      click_button create_text(Event)
 
       expect(page).to have_content 'Event #1'
       expect(page).to have_content 'Local #1'
@@ -49,9 +49,9 @@ feature 'Admin events', :omniauth do
 
     scenario 'add fails incomplete event' do
       visit '/admin/events/new'
-      click_button 'Create Event'
+      click_button create_text(Event)
 
-      expect(page).to have_content "can't be blank"
+      expect(page).to have_content(error_text_for :blank)
     end
 
     scenario 'edit event' do
@@ -63,7 +63,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_local',       with: 'Local #1.1'
       fill_in 'event_address',     with: 'Address #1.1'
 
-      click_button 'Update Event'
+      click_button update_text(Event)
 
       expect(page).to have_content 'Event #1.1'
       expect(page).to have_content 'Local #1.1'
@@ -75,9 +75,9 @@ feature 'Admin events', :omniauth do
 
       visit "/admin/events/#{event.slug}/edit"
       fill_in 'event_name', with: ''
-      click_button 'Update Event'
+      click_button update_text(Event)
 
-      expect(page).to have_content "can't be blank"
+      expect(page).to have_content(error_text_for :blank)
     end
 
     scenario 'destroy event' do

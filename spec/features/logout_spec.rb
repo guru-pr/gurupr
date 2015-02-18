@@ -5,7 +5,7 @@ feature 'Logout', :omniauth do
     sign_in(create(:user))
 
     visit '/'
-    click_link 'Logout'
-    expect(page).to have_content 'Join'
+    click_link logout_text
+    expect(page).to have_content login_text
   end
 end
