@@ -2,6 +2,7 @@
 ul.members-grid
   - members.each do |member|
     li
-      = image_tag member.image
-      p.name = member.name
+      = link_to "https://github.com/#{member.nickname}", target: '_blank' do
+        = image_tag member.image
+        p.name = member.name
 /! shared/members_grid
