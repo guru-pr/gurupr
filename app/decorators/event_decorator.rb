@@ -13,6 +13,12 @@ class EventDecorator < ApplicationDecorator
     end
   end
 
+  def local_map
+    link_to "https://www.google.com.br/maps/search/#{object.address}", target: '_blank' do
+      image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{object.address}&zoom=15&size=300x300&markers=color:0xCC342D|#{object.address}", class: 'img-responsive pull-right')
+    end
+  end
+
   def summary
     render_markdown object.summary
   end
