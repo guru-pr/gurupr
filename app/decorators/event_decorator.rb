@@ -1,7 +1,7 @@
 class EventDecorator < ApplicationDecorator
   include Draper::LazyHelpers
 
-  delegate :name
+  delegate :name, :slug, :persisted?
 
   def occurred_at
     fa_icon 'calendar', text: l(object.occurred_at, format: '%a %d/%m/%Y %H:%M')
