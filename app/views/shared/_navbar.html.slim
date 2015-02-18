@@ -6,7 +6,6 @@ nav.navbar.navbar-default
 
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav.navbar-right
-        li = link_to t('.members'), "/#members"
         - if user_signed_in?
           li = link_to t('.exit'), logout_path, method: :delete
         - else
