@@ -1,0 +1,35 @@
+.members-grid {
+  li {
+    @extend .img-thumbnail;
+
+    list-style-type: none;
+    margin: 20px;
+    float: left;
+    display: inline;
+
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+
+    img {
+      @extend .img-responsive;
+
+      border-radius: 4px 4px 0 0;
+      width: 140px;
+      height: auto;
+    }
+
+    p.name {
+      @extend .text-center;
+      padding: 5px;
+      background-color: black;
+      color: white;
+      margin: 0px;
+      border-radius:  0 0 4px 4px;
+    }
+  }
+
+  li:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+  }
+}
