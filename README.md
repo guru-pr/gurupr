@@ -18,11 +18,6 @@ rake db:create db:migrate
 rails server
 ```
 
-## TODO
-
-- ~~Melhorar~~ Fazer o layout
-- Adicionar [ribbon](https://github.com/blog/273-github-ribbons)
-
 ## Feito
 
 - ~~Configurar timezone para `Brasilia`~~
@@ -31,3 +26,5 @@ rails server
 - ~~Adicionar eventos~~
 - ~~Travis!~~
 - ~~Codeclimate!~~
+- ~~Adicionar [ribbon](https://github.com/blog/273-github-ribbons)~~
+- ~~Fazer o layout~~
