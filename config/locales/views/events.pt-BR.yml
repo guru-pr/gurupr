@@ -1,0 +1,5 @@
+pt-BR:
+  events:
+    banner:
+      register: 'Inscreva-se já!'
+      more_details: Maiores informações

@@ -1,0 +1,15 @@
+/! shared/navbar
+nav.navbar.navbar-default
+  .container
+    .navbar-header
+      = link_to 'GURU-PR', root_path, class: 'navbar-brand'
+
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          li = link_to t('.exit'), logout_path, method: :delete
+        - else
+          li
+            = link_to join_path do
+              = fa_icon 'github', text: t('.join')
+/! shared/navbar

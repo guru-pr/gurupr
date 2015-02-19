@@ -16,11 +16,35 @@ module Omniauth
   end
 
   module SessionHelpers
+    def login_text
+      I18n.t 'shared.navbar.join'
+    end
+
+    def logout_text
+      I18n.t 'shared.navbar.exit'
+    end
+
+    def create_text(model)
+      I18n.t 'helpers.submit.create', model: model.model_name.human
+    end
+
+    def submit_text(model)
+      I18n.t 'helpers.submit.submit', model: model.model_name.human
+    end
+
+    def update_text(model)
+      I18n.t 'helpers.submit.update', model: model.model_name.human
+    end
+
+    def error_text_for(name, options = nil)
+      I18n.t "errors.messages.#{name}", options
+    end
+
     def sign_in(user)
       visit '/'
-      expect(page).to have_content("Join")
+      expect(page).to have_content(login_text)
       auth_mock(user)
-      click_link "Join"
+      click_link login_text
     end
   end
 end

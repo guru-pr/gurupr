@@ -5,6 +5,8 @@ RSpec.describe Event, type: :model do
   it { is_expected.to validate_uniqueness_of(:name) }
   it { is_expected.to validate_presence_of(:slug) }
   it { is_expected.to validate_uniqueness_of(:slug) }
+  it { is_expected.to validate_presence_of(:summary) }
+  it { is_expected.to validate_presence_of(:description) }
   it { is_expected.to validate_presence_of(:occurred_at) }
   it { is_expected.to validate_presence_of(:local) }
   it { is_expected.to validate_presence_of(:address) }

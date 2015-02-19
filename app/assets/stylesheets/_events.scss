@@ -1,0 +1,16 @@
+.event {
+  @extend .row;
+
+  .description {
+    @extend .col-md-4;
+    @extend .col-md-offset-2;
+
+    font-size: 125%;
+    font-weight: 200;
+  }
+
+  .map {
+    @extend .col-md-4;
+    @extend .text-center;
+  }
+}

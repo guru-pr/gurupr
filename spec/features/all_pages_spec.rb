@@ -22,20 +22,10 @@ describe 'All pages' do
       expect(page).to have_content event.name
     end
 
-    it 'Shows date' do
-      visit "/events/#{event.slug}"
-      expect(page).to have_content event.occurred_at
-    end
-
-    it 'Shows local' do
-      visit "/events/#{event.slug}"
-      expect(page).to have_content event.local
-    end
-
     it 'Shows description' do
       visit "/events/#{event.slug}"
       # TODO: How I can change to `event.description`?
-      expect(page).to have_content 'Description'
+      expect(page).to have_content 'description'
     end
   end
 end

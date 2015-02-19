@@ -1,0 +1,17 @@
+- event = event.decorate unless event.decorated?
+/! events/banner
+.event-banner
+  .page-header
+    h1.text-center
+      = event.name
+      small
+        ul.list-inline
+          li.occurred = event.occurred_at
+          li.local = event.local_link
+
+  .summary
+    = event.summary
+
+  .text-center
+    = event.details_link
+/! events/banner

@@ -4,16 +4,16 @@ feature 'Join', :omniauth do
   scenario 'user can join using valid credentials' do
     sign_in(create(:user))
 
-    expect(page).to have_content 'Logout'
+    expect(page).to have_content logout_text
   end
 
   scenario 'user can not join using invalid credentials' do
     OmniAuth.config.mock_auth[:github] = :invalid_credentials
 
     visit '/'
-    click_link 'Join'
+    click_link login_text
 
-    expect(page).to_not have_content 'Logout'
+    expect(page).to_not have_content logout_text
   end
 
   scenario 'user can not join using invalid session' do
@@ -22,6 +22,6 @@ feature 'Join', :omniauth do
 
     visit '/'
 
-    expect(page).to_not have_content 'Logout'
+    expect(page).to_not have_content logout_text
   end
 end

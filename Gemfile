@@ -22,6 +22,14 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# frontend
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+gem 'font-awesome-rails', '~> 4.3.0'
+gem 'slim', '~> 3.0.1'
+gem 'redcarpet', '~> 3.2.2'
+gem 'draper', '~> 1.4.0'
+
 # Auth
 gem 'omniauth-github'
 
@@ -30,6 +38,9 @@ gem 'simple_form'
 
 # Slug
 gem 'friendly_id'
+
+# Collenction of locale settings
+gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
   # Environment variables
