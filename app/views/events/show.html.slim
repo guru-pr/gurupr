@@ -1,5 +1,8 @@
 = content_for :header
   = render 'events/banner', event: @event
 
-= @event.local_map_link
-= @event.description
+.event
+  .description
+    = @event.description
+  .map
+    = @event.local_map_link
