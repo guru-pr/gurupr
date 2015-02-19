@@ -17,6 +17,12 @@
       font-size: 50%;
       ul {
         margin: $default-margin;
+
+        @media (max-width: $screen-xs-max) {
+          li {
+            padding: 5px;
+          }
+        }
       }
     }
   }
@@ -28,5 +34,10 @@
   .summary {
     font-size: $font-size-h3;
     font-weight: lighter;
+
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      padding: 5px;
+    }
   }
 }

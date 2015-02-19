@@ -1,29 +1,28 @@
 // image-header.scss
-$image-header-height: 400px;
-
 .image-header {
   @extend .row;
 
-  height: $image-header-height;
   margin-top: -20px;
   margin-bottom: 20px;
   color: $body-bg;
 
   background-image: url(http://www.gsccc.org.sg/portal/en/templates/gracechurc/images/bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center center;
+
+  @media (min-width: $screen-md-min) {
+    background-size: 100% auto;
+  }
 }
 
 .image-header.small {
-  height: $image-header-height / 3.3;
-
   .page-header {
     border: 0;
   }
 
-  .summary, .btn {
-    visibility: hidden;
+  .event-banner {
+    .summary, div:last-child {
+      @extend .hidden;
+    }
   }
 }
 // image-header.scss
