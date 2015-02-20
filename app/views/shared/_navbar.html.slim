@@ -2,6 +2,12 @@
 nav.navbar.navbar-default
   .container
     .navbar-header
+      button.navbar-toggle[data-toggle="collapse" data-target=".navbar-collapse"]
+        span.sr-only
+          | Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
       = link_to 'GURU-PR', root_path, class: 'navbar-brand'
 
     #navbar.navbar-collapse.collapse
