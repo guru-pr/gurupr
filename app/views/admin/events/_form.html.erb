@@ -2,10 +2,10 @@
     <%= f.input :name %>
     <%= f.input :local %>
     <%= f.input :address %>
-    <%= f.input :occurred_at, as: :text %>
+    <%= f.input :occurred_at, as: :string %>
     <%= f.input :summary %>
     <%= f.input :description %>
 
-    <%= f.submit %>
-    <%= link_to :back %>
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Back', admin_events_path, class: 'btn btn-danger' %>
 <% end %>
