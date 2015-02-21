@@ -23,7 +23,7 @@ feature 'Admin users', :omniauth do
     visit '/admin/users'
 
     # TODO: Improve this... (;
-    expect(first("a[href='/admin/users/#{admin.id}/accesses']").text).to eq 'Revoke'
-    expect(first("a[href='/admin/users/#{normal.id}/accesses']").text).to eq 'Grant'
+    expect(first("a[href='/admin/users/#{admin.id}/accesses']")['class']).to include 'btn-danger'
+    expect(first("a[href='/admin/users/#{normal.id}/accesses']")['class']).to include 'btn-success'
   end
 end

@@ -1,15 +1,38 @@
-<h1>Admin users</h1>
+<%= content_for :header do %>
+  <div class="container">
+    <div class="page-header">
+      <h1>Users</h1>
+      <small>Manage admin access to users</small>
+    </div>
+  </div>
+<% end %>
 
-<ul>
-  <% @admins.each do |admin| %>
-  <li><%= admin.name %> <%= link_to 'Revoke', admin_user_accesses_path(admin), method: :delete %></li>
-  <% end %>
-</ul>
+<div class='row'>
+  <ul class='col-md-3 members-grid'>
+    <% @admins.each do |admin| %>
+    <li>
+      <%= image_tag admin.image %>
+      <p class='name'>
+        <%= admin.name %>
+        <%= link_to admin_user_accesses_path(admin), method: :delete, title: 'Revoke admin access', class: 'btn btn-xs btn-danger pull-right' do %>
+          <%= fa_icon 'thumbs-down' %>
+        <% end %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
 
-<h1>Normal users</h1>
-
-<ul>
-  <% @users.each do |user| %>
-  <li><%= user.name %> <%= link_to 'Grant', admin_user_accesses_path(user), method: :post %></li>
-  <% end %>
-</ul>
+  <ul class='col-md-9 members-grid'>
+    <% @users.each do |user| %>
+    <li>
+      <%= image_tag user.image %>
+      <p class='name'>
+        <%= user.name %>
+        <%= link_to admin_user_accesses_path(user), method: :post, title: 'Grant admin access', class: 'btn btn-xs btn-success pull-right' do %>
+          <%= fa_icon 'thumbs-up' %>
+        <% end %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+</div>
