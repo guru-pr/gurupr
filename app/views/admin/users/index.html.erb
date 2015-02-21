@@ -1,8 +1,8 @@
 <%= content_for :header do %>
   <div class="container">
     <div class="page-header">
-      <h1>Users</h1>
-      <small>Manage admin access to users</small>
+      <h1><%= t '.title' %></h1>
+      <small><%= t '.subtitle' %></small>
     </div>
   </div>
 <% end %>
@@ -14,7 +14,7 @@
       <%= image_tag admin.image %>
       <p class='name'>
         <%= admin.name %>
-        <%= link_to admin_user_accesses_path(admin), method: :delete, title: 'Revoke admin access', class: 'btn-revoke' do %>
+        <%= link_to admin_user_accesses_path(admin), method: :delete, title: t('.revoke'), class: 'btn-revoke' do %>
           <%= fa_icon 'thumbs-down' %>
         <% end %>
       </p>
@@ -28,7 +28,7 @@
       <%= image_tag user.image %>
       <p class='name'>
         <%= user.name %>
-        <%= link_to admin_user_accesses_path(user), method: :post, title: 'Grant admin access', class: 'btn-grant' do %>
+        <%= link_to admin_user_accesses_path(user), method: :post, title: t('.grant'), class: 'btn-grant' do %>
           <%= fa_icon 'thumbs-up' %>
         <% end %>
       </p>

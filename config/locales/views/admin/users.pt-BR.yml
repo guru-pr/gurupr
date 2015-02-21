@@ -1,0 +1,9 @@
+pt-BR:
+  admin:
+    users:
+      index:
+        title: Usuários
+        subtitle: Gerenciamento dos acessos como administrador
+        # buttons
+        grant: Conceder acesso administrador
+        revoke: Revogar acesso administrador
