@@ -1,0 +1,24 @@
+= content_for :header
+  .container
+    .page-header
+      h1 = t '.title'
+      small = t '.subtitle'
+
+.row
+  ul.members-grid.col-md-3
+    - for admin in @admins do
+      li
+        = image_tag admin.image
+        p.name
+          = admin.name
+          = link_to admin_user_accesses_path(admin), method: :delete, title: t('.revoke'), class: 'btn-revoke'
+            = fa_icon 'thumbs-down'
+
+  ul.members-grid.col-md-9
+    - for user in @users do
+      li
+        = image_tag user.image
+        p.name
+          = user.name
+          = link_to admin_user_accesses_path(user), method: :post, title: t('.grant'), class: 'btn-grant'
+            = fa_icon 'thumbs-down'

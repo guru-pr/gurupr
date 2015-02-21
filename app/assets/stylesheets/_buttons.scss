@@ -1,0 +1,41 @@
+input[type=submit] {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.btn-back {
+  @extend .btn;
+  @extend .btn-danger;
+}
+
+.btn-add {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .pull-right;
+}
+
+.btn-edit {
+  @extend .btn;
+  @extend .btn-info;
+  @extend .btn-xs;
+}
+
+.btn-delete {
+  @extend .btn;
+  @extend .btn-danger;
+  @extend .btn-xs;
+}
+
+.btn-grant {
+  @extend .btn;
+  @extend .btn-xs;
+  @extend .btn-success;
+  @extend .pull-right;
+}
+
+.btn-revoke {
+  @extend .btn;
+  @extend .btn-xs;
+  @extend .btn-danger;
+  @extend .pull-right;
+}

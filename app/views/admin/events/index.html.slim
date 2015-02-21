@@ -1,0 +1,29 @@
+= content_for :header do
+  .container
+    .page-header
+      h1 = t '.title'
+      small = t '.subtitle'
+      = link_to new_admin_event_path, class: 'btn-add' do
+        = fa_icon 'plus', text: t('.new')
+
+table.table.table-striped.table-hover
+  thead
+    tr
+      th = t '.name'
+      th = t '.local'
+      th = t '.address'
+      th = t '.occurred_at'
+      th
+  tbody
+    - @events.each do |event|
+      tr
+        td = event.name
+        td = event.local
+        td = event.address
+        td = event.occurred_at
+        td
+          = link_to edit_admin_event_path(event), title: t('.edit'), class: 'btn-edit' do
+            = fa_icon 'pencil-square-o'
+          '
+          = link_to [:admin, event], method: :delete, title: t('.delete'), class: 'btn-delete', data: { confirm: t('.delete-confirm') } do
+            = fa_icon 'trash'
