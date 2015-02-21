@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      event: Evento
+    attributes:
+      event:
+        name: Nome
+        local: Local
+        address: Endereço
+        occurred_at: Ocorrido em
+        summary: Resumo
+        description: Descrição

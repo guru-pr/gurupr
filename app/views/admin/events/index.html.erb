@@ -1,11 +1,11 @@
 <%= content_for :header do %>
   <div class="container">
     <div class="page-header">
-      <h1>Events</h1>
-      <small>Manage events</small>
+      <h1><%= t '.title' %></h1>
+      <small><%= t '.subtitle' %></small>
 
       <%= link_to new_admin_event_path, class: 'btn-add' do %>
-        <%= fa_icon 'plus', text: 'New event' %>
+        <%= fa_icon 'plus', text: t('.new') %>
       <% end %>
     </div>
   </div>
@@ -14,10 +14,10 @@
 <table class='table table-striped table-hover'>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Local</th>
-      <th>Address</th>
-      <th>Occurred at</th>
+      <th><%= t '.name' %></th>
+      <th><%= t '.local' %></th>
+      <th><%= t '.address' %></th>
+      <th><%= t '.occurred_at' %></th>
       <th></th>
     </tr>
   </thead>
@@ -29,10 +29,10 @@
       <td><%= event.address %></td>
       <td><%= event.occurred_at %></td>
       <td>
-        <%= link_to edit_admin_event_path(event), title: 'Edit event', class: 'btn-edit' do %>
+        <%= link_to edit_admin_event_path(event), title: t('.edit'), class: 'btn-edit' do %>
           <%= fa_icon 'pencil-square-o' %>
         <% end %>
-        <%= link_to [:admin, event], method: :delete, title: 'Delete event', class: 'btn-delete', data: { confirm: 'Are you sure?' } do %>
+        <%= link_to [:admin, event], method: :delete, title: t('.delete'), class: 'btn-delete', data: { confirm: t('.delete-confirm') } do %>
           <%= fa_icon 'trash' %>
         <% end %>
       </td>

@@ -1,0 +1,24 @@
+pt-BR:
+  admin:
+    events:
+      index:
+        title: Eventos
+        subtitle: Gerenciamento de eventos
+        # attributes
+        name: Nome
+        local: Local
+        address: Endereço
+        occurred_at: Ocorrido em
+        # buttons
+        new: Novo
+        edit: Editar
+        delete: Apagar
+        delete-confirm: Você tem certeza?
+      form:
+        back: Voltar
+      new:
+        title: Adicionar evento
+        subtitle: Adicionando um novo evento
+      edit:
+        title: 'Alterar evento: %{name}'
+        subtitle: Alterando os dados do evento
