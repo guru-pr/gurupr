@@ -24,5 +24,6 @@ table.table.table-striped.table-hover
         td
           = link_to edit_admin_event_path(event), title: t('.edit'), class: 'btn-edit' do
             = fa_icon 'pencil-square-o'
+          '
           = link_to [:admin, event], method: :delete, title: t('.delete'), class: 'btn-delete', data: { confirm: t('.delete-confirm') } do
             = fa_icon 'trash'
