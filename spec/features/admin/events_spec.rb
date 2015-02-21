@@ -86,7 +86,7 @@ feature 'Admin events', :omniauth do
 
       visit '/admin/events'
 
-      click_link 'Delete'
+      first('.btn-delete').click
 
       expect(page).to_not have_content event.name
     end

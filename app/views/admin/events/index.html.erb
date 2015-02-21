@@ -4,7 +4,7 @@
       <h1>Events</h1>
       <small>Manage events</small>
 
-      <%= link_to new_admin_event_path, class: 'btn btn-primary pull-right' do %>
+      <%= link_to new_admin_event_path, class: 'btn-add' do %>
         <%= fa_icon 'plus', text: 'New event' %>
       <% end %>
     </div>
@@ -29,10 +29,10 @@
       <td><%= event.address %></td>
       <td><%= event.occurred_at %></td>
       <td>
-        <%= link_to edit_admin_event_path(event), title: 'Edit event', class: 'btn btn-info btn-xs' do %>
+        <%= link_to edit_admin_event_path(event), title: 'Edit event', class: 'btn-edit' do %>
           <%= fa_icon 'pencil-square-o' %>
         <% end %>
-        <%= link_to [:admin, event], method: :delete, title: 'Delete event', class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } do %>
+        <%= link_to [:admin, event], method: :delete, title: 'Delete event', class: 'btn-delete', data: { confirm: 'Are you sure?' } do %>
           <%= fa_icon 'trash' %>
         <% end %>
       </td>

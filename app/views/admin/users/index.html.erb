@@ -14,7 +14,7 @@
       <%= image_tag admin.image %>
       <p class='name'>
         <%= admin.name %>
-        <%= link_to admin_user_accesses_path(admin), method: :delete, title: 'Revoke admin access', class: 'btn btn-xs btn-danger pull-right' do %>
+        <%= link_to admin_user_accesses_path(admin), method: :delete, title: 'Revoke admin access', class: 'btn-revoke' do %>
           <%= fa_icon 'thumbs-down' %>
         <% end %>
       </p>
@@ -28,7 +28,7 @@
       <%= image_tag user.image %>
       <p class='name'>
         <%= user.name %>
-        <%= link_to admin_user_accesses_path(user), method: :post, title: 'Grant admin access', class: 'btn btn-xs btn-success pull-right' do %>
+        <%= link_to admin_user_accesses_path(user), method: :post, title: 'Grant admin access', class: 'btn-grant' do %>
           <%= fa_icon 'thumbs-up' %>
         <% end %>
       </p>
