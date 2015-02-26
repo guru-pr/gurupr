@@ -1,6 +1,6 @@
 class ApplicationDecorator < Draper::Decorator
   def renderer
-    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, strikethrough: true)
   end
 
   def render_markdown(markdown)
