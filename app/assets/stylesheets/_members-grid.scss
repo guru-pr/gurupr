@@ -29,6 +29,10 @@
       color: white;
       margin: 0px;
       border-radius:  0 0 4px 4px;
+      max-width: 140px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
