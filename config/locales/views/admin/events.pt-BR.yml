@@ -15,7 +15,10 @@ pt-BR:
         delete: Apagar
         delete-confirm: Você tem certeza?
       form:
+        text: Texto
+        preview: Visualização
         back: Voltar
+        loading: Carregando...
       new:
         title: Adicionar evento
         subtitle: Adicionando um novo evento
