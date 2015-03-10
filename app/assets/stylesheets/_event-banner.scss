@@ -40,4 +40,11 @@
       padding: 5px;
     }
   }
+
+  .btn-more-details {
+    @extend .btn;
+    @extend .btn-success;
+
+    margin-bottom: 20px;
+  }
 }

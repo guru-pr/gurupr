@@ -28,6 +28,6 @@ class EventDecorator < ApplicationDecorator
   end
 
   def details_link
-    link_to t('events.banner.more_details'), object, class: 'btn btn-success'
+    link_to t('events.banner.more_details'), object, class: 'btn-more-details'
   end
 end
