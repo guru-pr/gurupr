@@ -35,14 +35,6 @@
     font-size: $font-size-h3;
     font-weight: lighter;
 
-    a {
-      color: #f89090;
-
-      &:hover {
-        color: #cc342d;
-      }
-    }
-
     @media (max-width: $screen-xs-max) {
       text-align: center;
       padding: 5px;
