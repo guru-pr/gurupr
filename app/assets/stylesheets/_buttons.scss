@@ -28,14 +28,22 @@ input[type=submit] {
 
 .btn-grant {
   @extend .btn;
-  @extend .btn-xs;
+  @extend .btn-sm;
   @extend .btn-success;
   @extend .pull-right;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .btn-revoke {
   @extend .btn;
-  @extend .btn-xs;
+  @extend .btn-sm;
   @extend .btn-danger;
   @extend .pull-right;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
