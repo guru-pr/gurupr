@@ -1,10 +1,32 @@
-= simple_form_for([:admin, @event], html: { class: 'form-horizontal' }) do |f|
+= simple_form_for([:admin, @event]) do |f|
   = f.input :name
   = f.input :local
   = f.input :address
   = f.input :occurred_at, as: :string
-  = f.input :summary
-  = f.input :description
+
+  = f.label :summary
+  div[role='tabpanel']
+    ul.nav.nav-tabs[role='tablist']
+      li.active[role='presentation']
+        a[href='#event_summary_text' aria-controls='event_summary_text' role='tab' data-toggle='tab'] = t('.text')
+      li[role='presentation']
+        a[href='#event_summary_preview' aria-controls='event-event_summary_preview' role='tab' data-toggle='tab' data-element-from='#event_summary' data-element-to='#event_summary_preview'] = t('.preview')
+    .tab-content
+      .tab-pane.active[id='event_summary_text']
+        = f.input :summary, label: false, input_html: { rows: 5 }
+      .tab-pane[id='event_summary_preview'] = t('.loading')
+
+  = f.label :description
+  div[role='tabpanel']
+    ul.nav.nav-tabs[role='tablist']
+      li.active[role='presentation']
+        a[href='#event_description_text' aria-controls='event_description_text' role='tab' data-toggle='tab'] = t('.text')
+      li[role='presentation']
+        a[href='#event_description_preview' aria-controls='event_description_preview' role='tab' data-toggle='tab' data-element-from='#event_description' data-element-to='#event_description_preview'] = t('.preview')
+    .tab-content
+      .tab-pane.active[id='event_description_text']
+        = f.input :description, label: false, input_html: { rows: 15 }
+      .tab-pane[id='event_description_preview'] = t('.loading')
 
   = f.submit
   '
