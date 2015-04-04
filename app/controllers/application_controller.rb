@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_signed_in?
   helper_method :authenticate_admin!
+  helper_method :title
 
   private
 
@@ -27,5 +28,11 @@ class ApplicationController < ActionController::Base
 
   def user_signed_in?
     current_user.present?
+  end
+
+  def title
+    return "#{@title} - #{t('layouts.application.title_suffix')}" if @title.present?
+
+    t('layouts.application.title')
   end
 end

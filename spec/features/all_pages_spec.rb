@@ -17,6 +17,11 @@ describe 'All pages' do
   end
 
   context 'Event show' do
+    it 'Shows name in title' do
+      visit "/events/#{event.slug}"
+      expect(page.title).to include "#{event.name}"
+    end
+
     it 'Shows name' do
       visit "/events/#{event.slug}"
       expect(page).to have_content event.name
