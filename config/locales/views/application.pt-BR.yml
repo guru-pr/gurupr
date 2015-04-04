@@ -1,5 +1,6 @@
 pt-BR:
   layouts:
     application:
-      title: 'GURU-PR :: Grupo de Usuários Ruby do Paraná'
+      title: 'GURU-PR - Grupo de Usuários Ruby do Paraná'
+      title_suffix: 'GURU-PR'
       description: Site do Grupo de Usuários Ruby do Paraná
