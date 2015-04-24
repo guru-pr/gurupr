@@ -1,0 +1,27 @@
+en:
+  admin:
+    events:
+      index:
+        title: Events
+        subtitle: Events Management
+        # attributes
+        name: Name
+        local: Location
+        address: Address
+        occurred_at: Occurred in
+        # buttons
+        new: New
+        edit: Edit
+        delete: Delete
+        delete-confirm: "Are  you sure?"
+      form:
+        text: Text
+        preview: Preview
+        back: Back
+        loading: Loading...
+      new:
+        title: Add event
+        subtitle: Adding new event
+      edit:
+        title: 'Edit event: %{name}'
+        subtitle: "Editing event's information"
