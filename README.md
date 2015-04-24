@@ -13,6 +13,7 @@ De resto, vamos desenvolvendo aos poucos!
 
 ```bash
 cp .env.example .env # copie e configure as chaves
+cp config/database.yml.example config/database.yml # configure seus dados de acesso ao DB
 bundle install
 rake db:create db:migrate
 rails server
