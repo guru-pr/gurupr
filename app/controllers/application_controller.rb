@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   helper_method :authenticate_admin!
   helper_method :title
 
+  def default_url_options(options = {})
+    { locale: I18n.locale }
+  end
+
   private
 
   def current_user
