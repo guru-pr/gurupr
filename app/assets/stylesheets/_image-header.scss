@@ -6,12 +6,7 @@
   margin-bottom: 20px;
   color: $body-bg;
 
-  background-image: url(http://www.gsccc.org.sg/portal/en/templates/gracechurc/images/bg.jpg);
-  background-repeat: no-repeat;
-
-  @media (min-width: $screen-md-min) {
-    background-size: 100% auto;
-  }
+  background-image: image-url('background.jpg');
 }
 
 .image-header.small {
