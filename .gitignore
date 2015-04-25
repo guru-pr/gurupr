@@ -14,6 +14,8 @@
 
 .env
 
+*.orig
+
 coverage
 
 config/database.yml
