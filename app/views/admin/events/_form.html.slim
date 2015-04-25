@@ -2,7 +2,7 @@
   = f.input :name
   = f.input :local
   = f.input :address
-  = f.input :occurred_at, as: :string
+  = f.input :occurred_at, as: :string, input_html: { value: @event.occurred_at.in_time_zone('Brasilia').strftime('%d-%m-%Y  %H:%M') }
 
   = f.label :summary
   div[role='tabpanel']
