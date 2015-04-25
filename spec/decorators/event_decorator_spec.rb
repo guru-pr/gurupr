@@ -13,4 +13,15 @@ RSpec.describe EventDecorator, type: :decorator do
   it { expect(subject.summary).to        eq("<p>summary</p>\n") }
   it { expect(subject.description).to    eq("<p>description</p>\n") }
   it { expect(subject.details_link).to   eq("<a class=\"btn-more-details\" href=\"/events/event\">Maiores informações</a>") }
+
+  describe '#calendar_properties' do
+    let(:properties) { subject.calendar_properties }
+
+    it { expect(properties.date_start).to eq event.occurred_at }
+    it { expect(properties.date_end).to eq event.occurred_at + 2.hours }
+    it { expect(properties.timezone).to eq Rails.configuration.time_zone }
+    it { expect(properties.title).to eq event.name }
+    it { expect(properties.description).to eq event.description }
+    it { expect(properties.location).to eq event.address }
+  end
 end

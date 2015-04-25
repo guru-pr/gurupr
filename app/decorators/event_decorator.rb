@@ -30,4 +30,15 @@ class EventDecorator < ApplicationDecorator
   def details_link
     link_to t('events.banner.more_details'), object, class: 'btn-more-details'
   end
+
+  def calendar_properties
+    @calendar_properties ||= OpenStruct.new(
+      date_start:  object.occurred_at,
+      date_end:    object.occurred_at + 2.hours, # TODO: Create new field for this?
+      timezone:    Rails.configuration.time_zone,
+      title:       object.name,
+      description: object.description, # TODO: Convert to plain text
+      location:    object.address
+    )
+  end
 end
