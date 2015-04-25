@@ -36,8 +36,9 @@ gem 'omniauth-github'
 # Friendly forms
 gem 'simple_form'
 
-# Slug
+# SEO
 gem 'friendly_id'
+gem 'route_translator'
 
 # Collenction of locale settings
 gem 'rails-i18n', '~> 4.0.0'
