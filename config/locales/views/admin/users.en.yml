@@ -1,0 +1,9 @@
+en:
+  admin:
+    users:
+      index:
+        title: Users
+        subtitle: Access management as adminstrator
+        # buttons
+        grant: Grant administrator access
+        revoke: Revoke administrator access

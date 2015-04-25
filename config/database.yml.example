@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: gurupr_development
+
+test:
+  <<: *default
+  database: gurupr_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
