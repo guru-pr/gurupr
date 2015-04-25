@@ -18,6 +18,19 @@ bundle install
 rake db:create db:migrate
 rails server
 ```
+## Testes
+
+Rspec
+
+```bash
+rspec
+```
+
+Rodar os testes de JS
+
+```bash
+rake teaspoon
+```
 
 ## Feito
 
