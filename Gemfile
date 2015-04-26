@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -28,7 +28,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails', '~> 4.3.0'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.2.2'
-gem 'draper', '~> 1.4.0'
+gem 'draper', '~> 2.1.0'
 
 # Auth
 gem 'omniauth-github'
