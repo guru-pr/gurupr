@@ -16,9 +16,14 @@ RSpec.describe Event, type: :model do
   context '.not_happened' do
     let!(:happened)     { create(:event_happened) }
     let!(:not_happened) { create(:event_not_happened) }
+    let!(:today)        { create(:event_today) }
 
     it 'only one event' do
-      expect(Event.not_happened.count).to eq 1
+      expect(Event.not_happened.count).to eq 2
+    end
+
+    it 'include today events' do
+      expect(Event.not_happened).to include(today)
     end
 
     it 'dont include happened events' do

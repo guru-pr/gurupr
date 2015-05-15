@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get    '/auth/:provider/callback', to: 'sessions#create'
   get    '/auth/failure',            to: 'sessions#failure'
 
-  resources :events, only: :show
+  localized do
+    resources :events, only: :show
+  end
 
   namespace :admin do
     resources :users, only: [:index] do

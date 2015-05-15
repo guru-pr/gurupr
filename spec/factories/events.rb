@@ -7,6 +7,11 @@ FactoryGirl.define do
     summary     'summary'
     description 'description'
 
+    factory :event_today do
+      name 'event today'
+      occurred_at { Time.current }
+    end
+
     factory :event_happened do
       name 'event happened'
       occurred_at { 1.year.ago }
