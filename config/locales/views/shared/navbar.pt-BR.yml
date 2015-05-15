@@ -1,5 +1,6 @@
 pt-BR:
   shared:
     navbar:
+      events: Eventos
       join: Participe
       exit: Sair

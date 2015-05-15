@@ -1,7 +1,6 @@
 en:
   layouts:
     application:
-      title: 'GURU-PR - Ruby Users Group of Paraná-Brazil'
       title_suffix: 'GURU-PR'
       description: 'Ruby Users Group of Paraná-Brazil'
 

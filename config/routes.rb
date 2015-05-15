@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get    '/auth/failure',            to: 'sessions#failure'
 
   localized do
-    resources :events, only: :show
+    resources :events, only: [:index, :show]
   end
 
   namespace :admin do

@@ -31,8 +31,8 @@ class ApplicationController < ActionController::Base
   end
 
   def title
-    return "#{@title} - #{t('layouts.application.title_suffix')}" if @title.present?
+    title = @title || t('.title')
 
-    t('layouts.application.title')
+    "#{title} - #{t('layouts.application.title_suffix')}"
   end
 end

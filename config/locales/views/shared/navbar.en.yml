@@ -1,5 +1,6 @@
 en:
   shared:
     navbar:
+      events: Events
       join: Sign Up
       exit: Sign Out

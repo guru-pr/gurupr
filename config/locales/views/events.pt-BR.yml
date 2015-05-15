@@ -1,5 +1,8 @@
 pt-BR:
   events:
+    index:
+      title: Eventos
+      subtitle: 'O que está para rolar ou já rolou por aqui (:'
     banner:
       more_details: Maiores informações
     add_to_calendar:
