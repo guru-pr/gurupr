@@ -4,6 +4,6 @@
 .event
   .description
     = @event.description
-  .map
-    = render 'add_to_calendar', calendar: @event.calendar_properties
-    = @event.local_map_link
+  .sidebar
+    p = render 'add_to_calendar', calendar: @event.calendar_properties
+    p = @event.local_map_link
