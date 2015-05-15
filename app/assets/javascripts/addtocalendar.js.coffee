@@ -8,4 +8,9 @@ class @AddToCalendar
     firstScript = document.getElementsByTagName("script")[0]
     firstScript.parentNode.insertBefore script, firstScript
 
-AddToCalendar.load()
+if typeof Turbolinks isnt 'undefined' and Turbolinks.supported
+  document.addEventListener "page:change", (->
+    AddToCalendar.load()
+  ), true
+else
+  AddToCalendar.load()
