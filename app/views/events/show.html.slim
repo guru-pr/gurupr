@@ -1,8 +1,9 @@
 = content_for :header
-  = render 'events/banner', event: @event
+  = render 'banner', event: @event
 
 .event
   .description
     = @event.description
-  .map
-    = @event.local_map_link
+  .sidebar
+    p = render 'add_to_calendar', calendar: @event.calendar_properties
+    p = @event.local_map_link

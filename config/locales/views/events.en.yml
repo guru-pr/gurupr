@@ -2,3 +2,5 @@ en:
   events:
     banner:
       more_details: More Information
+    add_to_calendar:
+      link: 'Add to calendar'

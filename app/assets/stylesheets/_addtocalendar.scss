@@ -1,0 +1,67 @@
+/**
+ * AddToCalendar Base CSS
+ * http://addtocalendar.com
+ */
+
+/* Base */
+
+.addtocalendar {
+  @extend .text-left;
+
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  background: transparent !important;
+
+  var {
+    display: none;
+  }
+}
+
+.atcb-link {
+  @extend .btn;
+  @extend .btn-primary;
+
+  display: block;
+  outline: none!important;
+  cursor: pointer;
+}
+
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+  visibility:visible;
+}
+
+.atcb-list {
+  @extend .list-group;
+
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  z-index: 900;
+}
+
+.atcb-item {
+  @extend .list-group-item;
+}
+
+.atcb-item-link
+{
+  text-decoration: none;
+  outline: none;
+  display: block;
+}
+
+.atcb-item.hover,
+.atcb-item:hover {
+  position: relative;
+  z-index: 900;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+
