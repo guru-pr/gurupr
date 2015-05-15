@@ -16,6 +16,18 @@ describe 'All pages' do
     end
   end
 
+  context 'Event list' do
+    it 'Shows name' do
+      visit "/events/"
+      expect(page).to have_content event.name
+    end
+
+    it 'Shows summary' do
+      visit "/events/"
+      expect(page).to have_content 'summary'
+    end
+  end
+
   context 'Event show' do
     it 'Shows name in title' do
       visit "/events/#{event.slug}"
