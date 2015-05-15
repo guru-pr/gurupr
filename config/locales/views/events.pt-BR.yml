@@ -2,3 +2,5 @@ pt-BR:
   events:
     banner:
       more_details: Maiores informações
+    add_to_calendar:
+      link: 'Adicionar ao calendário'
