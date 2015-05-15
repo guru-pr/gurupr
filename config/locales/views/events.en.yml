@@ -1,5 +1,8 @@
 en:
   events:
+    index:
+      title: Events
+      subtitle: 'List of scheduled and occurred events'
     banner:
       more_details: More Information
     add_to_calendar:
