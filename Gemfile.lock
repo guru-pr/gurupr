@@ -172,7 +172,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
-    redcarpet (3.2.3)
+    redcarpet (3.3.1)
     request_store (1.1.0)
     route_translator (4.0.0)
       actionpack (>= 3.0, < 5.0)
@@ -271,7 +271,7 @@ DEPENDENCIES
   rails (= 4.2.2)
   rails-i18n (~> 4.0.0)
   rails_12factor
-  redcarpet (~> 3.2.2)
+  redcarpet (~> 3.3.1)
   route_translator
   rspec-rails
   sass-rails (~> 5.0)
