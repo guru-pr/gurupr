@@ -73,6 +73,9 @@ group :production do
   # The twelve-factor app
   gem 'rails_12factor'
 
+  # Errors and exceptions
+  gem 'rollbar', '~> 1.5.3'
+
   # Webserver
   gem 'puma'
 end
