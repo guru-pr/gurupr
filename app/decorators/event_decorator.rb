@@ -41,4 +41,15 @@ class EventDecorator < ApplicationDecorator
       location:    object.address
     )
   end
+
+  def share_buttons
+    url = event_url(object)
+
+    buttons = {
+      'facebook'    => "http://www.facebook.com/sharer/sharer.php?u=#{url}",
+      'twitter'     => "http://twitter.com/share?url=#{url}&text=#{object.name}",
+      'google-plus' => "https://plus.google.com/share?url=#{url}",
+      'envelope'    => "mailto:?subject=#{object.name}&body=#{url}"
+    }
+  end
 end

@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe EventDecorator, type: :decorator do
+  include Draper::ViewHelpers
+
   let!(:event) { create(:event, occurred_at: Time.zone.parse('1977-03-14 14:15:16')) }
   subject { described_class.new(event) }
 
@@ -23,5 +25,32 @@ RSpec.describe EventDecorator, type: :decorator do
     it { expect(properties.title).to eq event.name }
     it { expect(properties.description).to eq event.description }
     it { expect(properties.location).to eq event.address }
+  end
+
+  describe '#share_buttons' do
+    let(:share_buttons) { subject.share_buttons }
+    let(:url) { "/events/#{event.id}" }
+
+    before { expect(helpers).to receive(:event_url).and_return("/events/#{event.id}") }
+
+    it 'button to share on facebook ' do
+      expect(share_buttons.keys).to include 'facebook'
+      expect(share_buttons['facebook']).to eq "http://www.facebook.com/sharer/sharer.php?u=#{url}"
+    end
+
+    it 'button to share on twitter' do
+      expect(share_buttons.keys).to include 'twitter'
+      expect(share_buttons['twitter']).to eq "http://twitter.com/share?url=#{url}&text=#{event.name}"
+    end
+
+    it 'button to share on google plus' do
+      expect(share_buttons.keys).to include 'google-plus'
+      expect(share_buttons['google-plus']).to eq "https://plus.google.com/share?url=#{url}"
+    end
+
+    it 'button to share via email' do
+      expect(share_buttons.keys).to include 'envelope'
+      expect(share_buttons['envelope']).to eq "mailto:?subject=#{event.name}&body=#{url}"
+    end
   end
 end
