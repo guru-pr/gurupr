@@ -25,6 +25,6 @@ html lang="#{I18n.locale}"
     div[class="image-header #{current_page?(:root) ? '' : 'small'}"]
       = yield :header
 
-    .container
-      .row
+    .row
+      .container
         = yield

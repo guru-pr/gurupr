@@ -1,5 +1,7 @@
 // image-header.scss
 .image-header {
+  @extend .row;
+
   margin-top: -20px;
   margin-bottom: 20px;
   color: $body-bg;
