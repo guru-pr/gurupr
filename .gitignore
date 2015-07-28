@@ -19,3 +19,7 @@
 coverage
 
 config/database.yml
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
