@@ -3,6 +3,7 @@
 #= require turbolinks
 #= require bootstrap/collapse
 #= require bootstrap/tab
+#= require bootstrap/dropdown
 #= require_tree .
 
 $(document).on 'page:change', ->

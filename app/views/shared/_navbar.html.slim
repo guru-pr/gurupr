@@ -15,6 +15,7 @@ nav.navbar.navbar-default
         li = link_to t('.events'), events_path
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          = render 'shared/admin_nav' if admin_signed_in?
           li = link_to t('.exit'), logout_path, method: :delete
         - else
           li
