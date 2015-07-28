@@ -1,0 +1,6 @@
+pt-BR:
+  shared:
+    admin_nav:
+      admin: Admin
+      users: Usuários
+      events: Eventos
