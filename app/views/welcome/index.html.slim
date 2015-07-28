@@ -4,6 +4,7 @@
 
 h3
   = t(".members")
+  .badge =< @members.size
 
 .row
   = render 'shared/members_grid', members: @members
