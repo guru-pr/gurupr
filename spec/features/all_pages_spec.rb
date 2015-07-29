@@ -4,6 +4,15 @@ describe 'All pages' do
   let!(:event)  { create(:event_not_happened) }
   let!(:member) { create(:user) }
 
+  context 'Header' do
+    include ActionView::Helpers
+    it 'Has atom link' do
+      visit '/'
+      atom_link = auto_discovery_link_tag :atom, events_url(format: 'atom')
+      expect(page.html).to include atom_link
+    end
+  end
+
   context 'Welcome' do
     it 'Exists next event' do
       visit '/'
