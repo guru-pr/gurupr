@@ -6,6 +6,7 @@ module MarkdownHelper
   end
 
   private
+
   def markdown_renderer
     @markdown_renderer ||= ApplicationDecorator.new(Object.new)
   end
