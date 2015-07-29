@@ -1,7 +1,9 @@
 = content_for :header do
   .container
     .page-header
-      h1 = t '.title'
+      h1
+        => t '.title'
+        = link_to fa_icon('rss'), events_url(format: 'atom')
       small = t '.subtitle'
 
 
