@@ -33,7 +33,16 @@ class ApplicationController < ActionController::Base
 
   def title
     title = @title || t('.title')
+    title = @title || t('.title', options)
 
     "#{title} - #{t('layouts.application.title_suffix')}"
+  end
+
+  def options
+    { name: record.name } if record.present?
+  end
+
+  def record
+    instance_variable_get("@#{controller_name.singularize}".to_sym)
   end
 end
