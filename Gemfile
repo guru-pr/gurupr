@@ -77,7 +77,7 @@ group :production do
   gem 'rails_12factor'
 
   # Errors and exceptions
-  gem 'rollbar', '~> 1.5.3'
+  gem 'rollbar'
 
   # Webserver
   gem 'puma'
