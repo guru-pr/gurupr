@@ -37,7 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (5.2.1)
+    autoprefixer-rails (6.0.3)
       execjs
       json
     binding_of_caller (0.7.2)
@@ -76,7 +76,7 @@ GEM
       activesupport (>= 3.0)
       request_store (~> 1.0)
     erubis (2.7.0)
-    execjs (2.5.2)
+    execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
