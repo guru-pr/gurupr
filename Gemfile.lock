@@ -54,7 +54,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    codeclimate-test-reporter (0.4.7)
+    codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
