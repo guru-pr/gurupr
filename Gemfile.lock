@@ -169,7 +169,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     redcarpet (3.3.2)
-    request_store (1.1.0)
+    request_store (1.2.0)
     rollbar (2.3.0)
       oj (~> 2.12.14)
     route_translator (4.0.0)
