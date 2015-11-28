@@ -84,7 +84,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    font-awesome-rails (4.4.0.0)
+    font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
@@ -259,7 +259,7 @@ DEPENDENCIES
   dotenv-rails
   draper (~> 2.1.0)
   factory_girl_rails
-  font-awesome-rails (~> 4.4.0)
+  font-awesome-rails (~> 4.5.0)
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails

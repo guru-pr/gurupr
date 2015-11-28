@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # frontend
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
-gem 'font-awesome-rails', '~> 4.4.0'
+gem 'font-awesome-rails', '~> 4.5.0'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.3.1'
 gem 'draper', '~> 2.1.0'
