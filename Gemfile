@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -43,6 +43,9 @@ gem 'route_translator'
 # Collenction of locale settings
 gem 'rails-i18n', '~> 4.0.0'
 
+# Errors and exceptions
+gem 'rollbar'
+
 group :development, :test do
   # Environment variables
   gem 'dotenv-rails'
@@ -75,9 +78,6 @@ end
 group :production do
   # The twelve-factor app
   gem 'rails_12factor'
-
-  # Errors and exceptions
-  gem 'rollbar'
 
   # Webserver
   gem 'puma'
