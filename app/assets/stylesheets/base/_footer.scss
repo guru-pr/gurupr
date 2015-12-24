@@ -1,0 +1,33 @@
+
+.site-footer {
+  background-color: $primary-color;
+  margin-top: ($base-spacing*2);
+  padding: ($base-spacing*2) 0 ($base-spacing*1.6);
+  text-align: center;
+
+  p {
+    color: lighten($white-color, 20%);
+    opacity: .9;
+    font-size: .8rem;
+  }
+}
+
+.social {
+  margin-bottom: $small-spacing;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    opacity: .7;
+    font-size: 1.6rem;
+    color: $white-color;
+    @include transition(opacity $animation-duration $base-timing);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

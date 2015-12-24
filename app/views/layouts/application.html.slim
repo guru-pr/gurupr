@@ -11,8 +11,7 @@ html lang="#{I18n.locale}"
 
     = auto_discovery_link_tag :atom, events_url(format: 'atom')
 
-    = stylesheet_link_tag    :application, media: :all, 'data-turbolinks-track' => true
-    = javascript_include_tag :application, 'data-turbolinks-track' => true
+    = stylesheet_link_tag :application, media: :all, debug: false, 'data-turbolinks-track' => true
     = csrf_meta_tags
 
     / [if lt IE 9]
@@ -27,6 +26,8 @@ html lang="#{I18n.locale}"
     div[class="image-header #{current_page?(:root) ? '' : 'small'}"]
       = yield :header
 
-    .row
-      .container
-        = yield
+    = yield
+
+    = render 'shared/footer'
+
+    = javascript_include_tag :application, debug: false, 'data-turbolinks-track' => true

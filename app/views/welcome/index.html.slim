@@ -2,9 +2,10 @@
   - if @next_event
     = render 'events/banner', event: @next_event
 
-h3
-  = t(".members")
-  .badge =< @members.size
+section.members
+  h3
+    = t(".members")
+    span.badge =< @members.size
 
-.row
+
   = render 'shared/members_grid', members: @members

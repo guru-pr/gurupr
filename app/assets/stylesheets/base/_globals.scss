@@ -1,0 +1,28 @@
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 90px;
+}
+
+.container {
+  max-width: $tablet-large-width;
+  padding: {
+    left: $base-spacing;
+    right: $base-spacing;
+  };
+  margin: {
+    left: auto;
+    right: auto;
+  };
+}
+
+.clearfix {
+  @include clearfix;
+}

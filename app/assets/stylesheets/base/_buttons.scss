@@ -1,0 +1,85 @@
+%btn {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: $white-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: $white-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+}
+
+.btn-more-details,
+.atc-style-button-icon {
+  @extend %btn;
+}
+
+.atc-style-button-icon {
+  position: relative;
+
+  a {
+    &,
+    &:hover,
+    &:focus {
+      color: $white-color;
+    }
+  }
+
+  .atcb-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $white-color;
+    padding: ($small-spacing/2) 0;
+    box-shadow: $form-box-shadow;
+
+    a {
+      padding: ($small-spacing/2) $small-spacing;
+      display: block;
+      color: $base-font-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: darken($white-color, 5%);
+      }
+    }
+  }
+
+  &:hover {
+    .atcb-list {
+      display: block;
+    }
+  }
+
+  .atc_event {
+    display: none;
+  }
+}

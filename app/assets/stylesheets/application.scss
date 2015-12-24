@@ -1,14 +1,15 @@
-@import 'custom-bootstrap/variables';
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import 'custom-bootstrap/styles';
-@import 'font-awesome';
+@import "bourbon";
 
-@import 'share-buttons';
-@import 'translation-missing';
-@import 'image-header';
-@import 'event-banner';
-@import 'members-grid';
-@import 'events';
-@import 'buttons';
-@import 'addtocalendar';
+@import 'core/variables';
+@import 'core/mixins';
+
+@import 'base/base';
+
+@import 'components/navbar';
+@import 'components/image-header';
+@import 'components/members';
+@import 'components/events';
+@import 'components/share-buttons';
+@import 'components/local-map';
+
+@import 'font-awesome';

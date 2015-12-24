@@ -1,0 +1,55 @@
+.navbar-toggle {
+  display: none;
+
+  // @include media($screen-tablet) {
+  // }
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: $black-color;
+  margin: 0;
+  background: url("#{$images-path}/ruby-logo.png") no-repeat left;
+  padding-left: 65px;
+  line-height: 65px;
+  display: block;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  min-height: 65px;
+  background-color: $white-color;
+  padding: $small-spacing 0;
+  border-bottom: 2px solid $primary-color;
+
+  // margin-bottom: $base-spacing;
+  // overflow: hidden;
+}
+
+.navbar-header {
+  float: left;
+}
+
+.navbar-nav {
+  float: right;
+
+  li {
+    display: inline-block;
+    margin-left: 35px;
+  }
+
+  a {
+    color: $base-font-color;
+    display: inline-block;
+    padding: 20px 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-color;
+    }
+  }
+}

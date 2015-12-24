@@ -1,13 +1,20 @@
 = content_for :header
   = render 'banner', event: @event
 
-.event
-  .description
-    = @event.description
+.event.event-show
+  .container
+    .description
+      = @event.description
+
+    p = render 'add_to_calendar', calendar: @event.calendar_properties
+
+    .local-map
+      = @event.local_map_link
+
     .share-buttons
+      h4 Compartilhe:
       - @event.share_buttons.each do |media, url|
         = link_to url, target: '_blank', class: media
           = fa_icon media
-  .sidebar
-    p = render 'add_to_calendar', calendar: @event.calendar_properties
-    p = @event.local_map_link
+
+
