@@ -1,16 +1,13 @@
 .navbar-toggle {
   display: none;
-
-  // @include media($screen-tablet) {
-  // }
 }
 
 .navbar-brand {
+  background: url("#{$images-path}/ruby-logo.png") no-repeat left;
+  padding-left: 65px;
   font-size: 2rem;
   color: $black-color;
   margin: 0;
-  background: url("#{$images-path}/ruby-logo.png") no-repeat left;
-  padding-left: 65px;
   line-height: 65px;
   display: block;
 }
