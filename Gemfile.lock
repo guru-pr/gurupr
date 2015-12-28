@@ -170,7 +170,7 @@ GEM
     rdoc (4.2.0)
     redcarpet (3.3.4)
     request_store (1.2.1)
-    rollbar (2.6.3)
+    rollbar (2.7.1)
       multi_json
     route_translator (4.2.2)
       actionpack (>= 3.2, < 5.0)
