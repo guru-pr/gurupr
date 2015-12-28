@@ -37,7 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.1.1)
+    autoprefixer-rails (6.2.2)
       execjs
       json
     binding_of_caller (0.7.2)
