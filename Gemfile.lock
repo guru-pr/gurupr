@@ -167,7 +167,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
-    redcarpet (3.3.3)
+    redcarpet (3.3.4)
     request_store (1.2.1)
     rollbar (2.6.3)
       multi_json
