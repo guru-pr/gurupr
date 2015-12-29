@@ -168,7 +168,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.1)
-      json (~> 1.4)
     redcarpet (3.3.4)
     request_store (1.2.1)
     rollbar (2.7.1)
@@ -288,4 +287,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
