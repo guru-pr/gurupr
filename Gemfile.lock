@@ -174,7 +174,7 @@ GEM
     request_store (1.2.1)
     rollbar (2.7.1)
       multi_json
-    route_translator (4.2.4)
+    route_translator (4.2.5)
       actionpack (>= 3.2, < 5.0)
       activesupport (>= 3.2, < 5.0)
     rspec-core (3.4.2)
