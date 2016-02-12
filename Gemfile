@@ -3,15 +3,17 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '5.0.0.beta2'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use Puma as the app server
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.1.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -19,8 +21,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Action Cable dependencies for the Redis adapter
+gem 'redis', '~> 3.0'
 
 # frontend
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -28,7 +31,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails', '~> 4.5.0'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.3.1'
-gem 'draper', '~> 2.1.0'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5' # TODO Back to official
+
+gem 'activemodel-serializers-xml'
 
 # Auth
 gem 'omniauth-github'
@@ -38,13 +43,16 @@ gem 'simple_form'
 
 # SEO
 gem 'friendly_id'
-gem 'route_translator'
+gem 'route_translator', github: 'enriclluelles/route_translator', branch: 'feature/rails5' # TODO Back to official
 
-# Collenction of locale settings
+# Collection of locale
 gem 'rails-i18n', '~> 4.0.0'
 
 # Errors and exceptions
 gem 'rollbar'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   # Environment variables
@@ -80,7 +88,4 @@ end
 group :production do
   # The twelve-factor app
   gem 'rails_12factor'
-
-  # Webserver
-  gem 'puma'
 end
