@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   end
 
   def options
-    { name: record.name } if record.present?
+    record.present? ? { name: record.name } : {}
   end
 
   def record
