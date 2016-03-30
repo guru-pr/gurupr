@@ -155,7 +155,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     pg (0.18.4)
-    puma (2.16.0)
+    puma (3.2.0)
     rack (2.0.0.alpha)
       json
     rack-test (0.6.3)
