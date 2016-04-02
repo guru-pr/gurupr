@@ -25,15 +25,15 @@ module Omniauth
     end
 
     def create_text(model)
-      I18n.t 'helpers.submit.create', model: model.model_name.human
+      I18n.t 'helpers.submit.create', model: model.model_name.human.downcase
     end
 
     def submit_text(model)
-      I18n.t 'helpers.submit.submit', model: model.model_name.human
+      I18n.t 'helpers.submit.submit', model: model.model_name.human.downcase
     end
 
     def update_text(model)
-      I18n.t 'helpers.submit.update', model: model.model_name.human
+      I18n.t 'helpers.submit.update', model: model.model_name.human.downcase
     end
 
     def error_text_for(name, options = nil)
