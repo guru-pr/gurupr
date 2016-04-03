@@ -23,7 +23,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 //
 $base-border-radius: 3px;
-$base-spacing: 2em;
+$base-spacing: 30px;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -50,7 +50,7 @@ $action-color: $primary-color;
 
 // Border
 //
-$base-border-color: $light-gray-color;
+$base-border-color: lighten($light-gray-color, 25%);
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
@@ -95,6 +95,3 @@ $min-desktop: $min-feature $desktop-width;
 $max-desktop: $max-feature ($desktop-width + 1);
 $min-desktop-large: $min-feature $desktop-large-width;
 $max-desktop-large: $max-feature ($desktop-large-width + 1);
-
-// images
-$images-path: '/assets';

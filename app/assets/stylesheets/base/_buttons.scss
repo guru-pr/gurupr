@@ -17,6 +17,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  box-shadow: 0 3px 0 darken($primary-color, 20%);
 
   &:hover,
   &:focus {
@@ -41,6 +42,7 @@
     background-color: transparent;
     border: 2px solid $action-color;
     color: $action-color;
+    box-shadow: none;
 
     &:hover,
     &:focus {
@@ -52,9 +54,12 @@
 }
 
 
+input[type="submit"],
+button[type="submit"],
 .btn-more-details,
 .btn-add,
 .btn-edit,
+.btn-back,
 .btn-delete,
 .atc-style-button-icon {
   @extend %btn;
@@ -62,6 +67,7 @@
 
 .btn-edit {
   background-color: lighten($blue-color, 20%);
+  box-shadow: 0 3px 0 darken($blue-color, 10%);
 
   &:hover {
     background-color: lighten($blue-color, 10%);
@@ -73,47 +79,18 @@
   font-size: 12px;
 }
 
-.atc-style-button-icon {
-  position: relative;
+.btn-back {
+  @extend .btn-small;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid $light-gray-color;
+  color: $light-gray-color;
+  box-shadow: none;
 
-  a {
-    &,
-    &:hover,
-    &:focus {
-      color: $white-color;
-    }
-  }
-
-  .atcb-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: $white-color;
-    padding: ($small-spacing/2) 0;
-    box-shadow: $form-box-shadow;
-
-    a {
-      padding: ($small-spacing/2) $small-spacing;
-      display: block;
-      color: $base-font-color;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: darken($white-color, 5%);
-      }
-    }
-  }
-
-  &:hover {
-    .atcb-list {
-      display: block;
-    }
-  }
-
-  .atc_event {
-    display: none;
+  &:hover,
+  &:focus {
+    background-color: rgba($white-color, .3);
+    border-color: shade($light-gray-color, 30%);
+    color: shade($light-gray-color, 30%);
   }
 }

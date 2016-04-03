@@ -28,6 +28,5 @@
         = f.input :description, label: false, input_html: { rows: 15 }
       .tab-pane[id='event_description_preview'] = t('.loading')
 
-  = f.submit
-  '
-  = link_to t('.back'), admin_events_path, class: 'btn-back'
+  = f.submit class: "pull-right"
+  = link_to t('.back'), admin_events_path, class: 'btn-back pull-left'

@@ -11,7 +11,7 @@ nav.navbar.navbar-default
       = link_to 'GURU-PR', root_path, class: 'navbar-brand'
 
     #navbar.navbar-collapse.collapse
-      ul.nav.navbar-nav
+      ul.guru-nav
         li = link_to events_path do
           = fa_icon 'calendar', text: t('.events')
         - if user_signed_in?

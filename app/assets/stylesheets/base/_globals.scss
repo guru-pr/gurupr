@@ -23,6 +23,7 @@ body {
   };
 }
 
+%clearfix,
 .clearfix {
   @include clearfix;
 }

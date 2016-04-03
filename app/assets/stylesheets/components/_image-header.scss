@@ -1,6 +1,14 @@
 
 .image-header {
-  background: url("#{$images-path}/ruby-pattern.png");
+  background: image-url("ruby-pattern.png") fixed;
   padding: ($base-spacing * 3) $base-spacing;
   margin-bottom: $base-spacing;
+}
+
+
+@media not all, not all, (-webkit-min-device-pixel-ratio: 1.3), not all, (min-resolution: 1.3dppx) {
+  .image-header {
+    background-image: image-url("ruby-pattern@2x.png");
+    background-size: 412px 412px;
+  }
 }

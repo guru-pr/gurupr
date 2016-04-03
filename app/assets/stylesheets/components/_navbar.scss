@@ -6,13 +6,20 @@ $navbar-height: 95px;
 }
 
 .navbar-brand {
-  background: url("#{$images-path}/ruby-logo.png") no-repeat left;
-  padding-left: $navbar-height;
+  background: image-url("ruby-logo.png") no-repeat left;
+  padding-left: 80px;
   font-size: 2rem;
   color: $black-color;
   margin: 0;
   line-height: $navbar-height;
   display: block;
+}
+
+@media not all, not all, (-webkit-min-device-pixel-ratio: 1.3), not all, (min-resolution: 1.3dppx) {
+  .navbar-brand {
+    background-image: image-url("ruby-logo@2x.png");
+    background-size: 62px 62px;
+  }
 }
 
 .navbar {
@@ -33,7 +40,7 @@ $navbar-height: 95px;
   float: left;
 }
 
-.navbar-nav {
+.guru-nav {
   float: right;
 
   li {
@@ -92,5 +99,54 @@ $navbar-height: 95px;
     &:hover {
       background-color: darken($white-color, 2%);
     }
+  }
+}
+
+
+.atc-style-button-icon {
+  position: relative;
+
+  a {
+    &,
+    &:hover,
+    &:focus {
+      color: $white-color;
+    }
+  }
+
+  .atcb-list {
+    display: none;
+    @extend .dropdown-menu;
+    margin-top: -2px;
+    width: 100%;
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    // right: 0;
+    // background-color: $white-color;
+    // padding: ($small-spacing/2) 0;
+    // box-shadow: $form-box-shadow;
+
+    a {
+      padding: ($small-spacing/2) $small-spacing;
+      display: block;
+      color: $base-font-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: darken($white-color, 5%);
+      }
+    }
+  }
+
+  &:hover {
+    .atcb-list {
+      display: block;
+    }
+  }
+
+  .atc_event {
+    display: none;
   }
 }

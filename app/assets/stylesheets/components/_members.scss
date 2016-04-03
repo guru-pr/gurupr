@@ -29,31 +29,47 @@
     height: 100%;
     font-size: .9rem;
   }
+}
 
-  a {
+.member {
+  color: $white-color;
+  border: 0;
+  margin: 5px;
+  display: inline-block;
+  background-size: cover;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  // border: $base-border;
+  box-shadow: 0 0 2px rgba($black-color, .2);
+  overflow: hidden;
+  opacity: .8;
+
+  &,
+  p {
+    @include transition(opacity 0.5s);
+  }
+
+  .btn-revoke,
+  .btn-grant {
+    @include position(absolute, null 0 30px 0);
+    font-size: 1.6rem;
     color: $white-color;
-    border: 0;
-    margin: 5px;
-    display: inline-block;
-    background-size: cover;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    overflow: hidden;
-    opacity: .8;
+  }
 
-    &, p {
-      @include transition(opacity 0.5s);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      &, p {
-        opacity: 1;
-      }
+  &:hover,
+  &:focus,
+  &:active {
+    &,
+    p {
+      opacity: 1;
     }
   }
+}
+
+.border-bottom {
+  border-bottom: $base-border;
+  padding-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
 }

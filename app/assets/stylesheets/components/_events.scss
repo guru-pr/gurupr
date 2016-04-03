@@ -1,15 +1,28 @@
 
 .event-banner,
 .page-header {
+  @extend %clearfix;
+
   h1 {
     font-size: 2.2rem;
-    margin-bottom: ($small-spacing/2);
+    margin-bottom: 0;
   }
 
-  p {
-    color: rgba($dark-gray-color, .8);
-    font-size: 1.2rem;
-    font-weight: 300;
+  p,
+  small {
+    display: block;
+    color: rgba($base-font-color, .75);
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .btn-add {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.pull-right {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -35,12 +48,31 @@
 }
 
 .event-item {
+  padding: $base-spacing;
+  padding-left: 180px;
   margin-bottom: $base-spacing;
-  padding-bottom: $base-spacing;
-  border-bottom: $base-border;
+  border-bottom: 1px solid rgba($base-border-color, .6);
+  position: relative;
+  transition: background-color .2s ease-in-out;
 
   h2 {
     font-size: 1.6rem;
+  }
+
+  .fa-calendar {
+    @include position(absolute, $base-spacing null null $base-spacing);
+    color: $primary-color;
+    opacity: .1;
+    font-size: 130px;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover {
+    background-color: darken($white-color, 3%);
+
+    .fa-calendar {
+      opacity: .5;
+    }
   }
 }
 
@@ -70,4 +102,9 @@
       padding-right: $small-spacing;
     }
   }
+}
+
+#event_summary_preview,
+#event_description_preview {
+  padding: $base-spacing 0;
 }
