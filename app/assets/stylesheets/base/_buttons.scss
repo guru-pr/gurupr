@@ -13,7 +13,7 @@
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
+  transition: transform $base-duration $base-timing, color $base-duration $base-timing, background-color $base-duration $base-timing;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -32,11 +32,45 @@
       background-color: $action-color;
     }
   }
+
+  &:active {
+    transform: scale(.9);
+  }
+
+  &.btn-ghost {
+    background-color: transparent;
+    border: 2px solid $action-color;
+    color: $action-color;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white-color, .3);
+      border-color: shade($action-color, 30%);
+      color: shade($action-color, 30%);
+    }
+  }
 }
 
+
 .btn-more-details,
+.btn-add,
+.btn-edit,
+.btn-delete,
 .atc-style-button-icon {
   @extend %btn;
+}
+
+.btn-edit {
+  background-color: lighten($blue-color, 20%);
+
+  &:hover {
+    background-color: lighten($blue-color, 10%);
+  }
+}
+
+.btn-small {
+  padding: ($small-spacing/2);
+  font-size: 12px;
 }
 
 .atc-style-button-icon {

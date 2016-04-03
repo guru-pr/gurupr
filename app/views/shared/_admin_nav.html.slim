@@ -1,6 +1,6 @@
 li.admin-nav.dropdown
   a.dropdown-toggle[href="#" data-toggle="dropdown"]
-    = t '.admin'
+    = fa_icon 'lock fw', text: t('.admin')
     span.caret
   ul.dropdown-menu
     li = link_to admin_users_path do

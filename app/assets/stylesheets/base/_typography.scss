@@ -1,6 +1,10 @@
 
 @import url("//fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic");
 
+html {
+  font-size: $unit-font-size;
+}
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;

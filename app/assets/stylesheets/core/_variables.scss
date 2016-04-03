@@ -6,6 +6,7 @@ $heading-font-family: $base-font-family;
 
 // Font Sizes
 //
+$unit-font-size: 14px;
 $base-font-size: 1rem;
 
 // Font weight
@@ -16,7 +17,7 @@ $font-weight-bold: 700;
 
 // Line height
 //
-$base-line-height: 1.5;
+$base-line-height: 1.42857;
 $heading-line-height: 1.2;
 
 // Other Sizes
@@ -44,7 +45,7 @@ $envelope-color: $dark-gray-color;
 
 // Font Colors
 //
-$base-font-color: $black-color;
+$base-font-color: lighten($dark-gray-color, 10%);
 $action-color: $primary-color;
 
 // Border

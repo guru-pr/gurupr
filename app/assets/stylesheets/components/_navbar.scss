@@ -1,14 +1,17 @@
+
+$navbar-height: 95px;
+
 .navbar-toggle {
   display: none;
 }
 
 .navbar-brand {
   background: url("#{$images-path}/ruby-logo.png") no-repeat left;
-  padding-left: 65px;
+  padding-left: $navbar-height;
   font-size: 2rem;
   color: $black-color;
   margin: 0;
-  line-height: 65px;
+  line-height: $navbar-height;
   display: block;
 }
 
@@ -17,9 +20,9 @@
   top: 0;
   width: 100%;
   z-index: 100;
-  min-height: 65px;
+  min-height: $navbar-height;
   background-color: $white-color;
-  padding: $small-spacing 0;
+  padding: 0;
   border-bottom: 2px solid $primary-color;
 
   // margin-bottom: $base-spacing;
@@ -36,17 +39,58 @@
   li {
     display: inline-block;
     margin-left: 35px;
+    position: relative;
   }
 
   a {
     color: $base-font-color;
     display: inline-block;
-    padding: 20px 0;
+    padding: 0;
+    line-height: $navbar-height;
 
     &:hover,
     &:focus,
     &:active {
       color: $primary-color;
+    }
+  }
+
+  .open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown-menu {
+  @include position(absolute, 100% null null 0);
+  z-index: 1000;
+  background-color: $white-color;
+  box-shadow: 0 0 2px rgba($black-color, .2);
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  display: none;
+
+  li,
+  a {
+    display: block;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    padding: 5px 15px;
+    line-height: $base-line-height;
+
+    &:hover {
+      background-color: darken($white-color, 2%);
     }
   }
 }
