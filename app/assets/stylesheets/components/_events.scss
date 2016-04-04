@@ -104,6 +104,13 @@
   }
 }
 
+.events-show {
+  .event-banner .btn-more-details {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 #event_summary_preview,
 #event_description_preview {
   padding: $base-spacing 0;
