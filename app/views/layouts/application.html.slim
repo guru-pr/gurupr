@@ -19,7 +19,7 @@ html lang="#{I18n.locale}"
       = javascript_include_tag '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'
       = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
 
-  body
+  body[class="#{controller_name}-#{action_name}"]
     = render 'shared/fork_me_ribbon'
 
     = render 'shared/navbar'
