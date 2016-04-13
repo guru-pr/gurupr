@@ -11,8 +11,7 @@ html lang="#{I18n.locale}"
 
     = auto_discovery_link_tag :atom, events_url(format: 'atom')
 
-    = stylesheet_link_tag    :application, media: :all, 'data-turbolinks-track' => true
-    = javascript_include_tag :application, 'data-turbolinks-track' => true
+    = stylesheet_link_tag :application, media: :all, debug: false, 'data-turbolinks-track' => true
     = csrf_meta_tags
     = action_cable_meta_tag
 
@@ -20,7 +19,7 @@ html lang="#{I18n.locale}"
       = javascript_include_tag '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'
       = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
 
-  body
+  body[class="#{controller_name}-#{action_name}"]
     = render 'shared/fork_me_ribbon'
 
     = render 'shared/navbar'
@@ -28,6 +27,8 @@ html lang="#{I18n.locale}"
     div[class="image-header #{current_page?(:root) ? '' : 'small'}"]
       = yield :header
 
-    .row
-      .container
-        = yield
+    = yield
+
+    = render 'shared/footer'
+
+    = javascript_include_tag :application, debug: false, 'data-turbolinks-track' => true

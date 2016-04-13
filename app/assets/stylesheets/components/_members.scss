@@ -1,0 +1,75 @@
+.members {
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: $base-spacing 0;
+
+    .badge {
+      font-size: .8rem;
+    }
+  }
+}
+
+.members-grid {
+  text-align: center;
+
+  p {
+    position: absolute;
+    vertical-align: middle;
+    background-color: rgba($black-color, 0.6);
+    line-height: 150px;
+    color: $white-color;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    font-size: .9rem;
+  }
+}
+
+.member {
+  color: $white-color;
+  border: 0;
+  margin: 5px;
+  display: inline-block;
+  background-size: cover;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  // border: $base-border;
+  box-shadow: 0 0 2px rgba($black-color, .2);
+  overflow: hidden;
+  opacity: .8;
+
+  &,
+  p {
+    @include transition(opacity 0.5s);
+  }
+
+  .btn-revoke,
+  .btn-grant {
+    @include position(absolute, null 0 30px 0);
+    font-size: 1.6rem;
+    color: $white-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &,
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+.border-bottom {
+  border-bottom: $base-border;
+  padding-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
+}

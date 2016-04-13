@@ -4,19 +4,19 @@
       h1 = t '.title'
       small = t '.subtitle'
 
-.row
-  ul.members-grid.col-md-3
+.container
+  ul.members-grid.border-bottom
     - for admin in @admins do
-      li
+      li.member
         = image_tag admin.image
         p.name
           = admin.name
           = link_to admin_user_accesses_path(admin), method: :delete, title: t('.revoke'), class: 'btn-revoke'
             = fa_icon 'thumbs-down'
 
-  ul.members-grid.col-md-9
+  ul.members-grid
     - for user in @users do
-      li
+      li.member
         = image_tag user.image
         p.name
           = user.name

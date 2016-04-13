@@ -1,8 +1,6 @@
 /! shared/members_grid
-ul.members-grid
+.members-grid
   - members.each do |member|
-    li
-      = link_to "https://github.com/#{member.nickname}", target: '_blank' do
-        = image_tag member.image
-        p.name = member.name
+    = link_to "https://github.com/#{member.nickname}", class: "member", style: "background-image: url(#{member.image})", title: "#{member.name}", target: "_blank" do
+      p.name = member.name
 /! shared/members_grid

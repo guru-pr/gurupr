@@ -4,12 +4,14 @@
       h1
         => t '.title'
         = link_to fa_icon('rss'), events_url(format: 'atom')
-      small = t '.subtitle'
+      p = t '.subtitle'
 
 
-- @events.each do |event|
-  article
-    header
-      h2 = link_to event.name, event
-      time = event.occurred_at
-    = event.summary
+section.events
+  .container
+    - @events.each do |event|
+      article.event-item
+        header
+          h2 = link_to event.name, event
+          time = event.occurred_at
+        = event.summary

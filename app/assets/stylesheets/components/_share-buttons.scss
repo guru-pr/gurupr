@@ -1,0 +1,51 @@
+.share-buttons {
+  text-align: center;
+  padding-top: $base-spacing * 2;
+
+  h4 {
+    font-weight: $font-weight-normal;
+    color: $medium-gray-color;
+  }
+
+  a {
+    display: inline-block;
+    color: $white-color;
+    border: none;
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    opacity: .8;
+    margin: 0 ($small-spacing/2);
+    @include transition(opacity $animation-duration $base-timing);
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+    outline: none;
+    border-radius: 50%;
+    font-size: 1rem;
+
+    &:hover {
+      color: lighten($white-color, 25%);
+      opacity: 1;
+    }
+
+    &:focus,
+    &:active {
+      position: relative;
+      top: 2px;
+      box-shadow: none;
+      color: $dark-gray-color;
+      outline: none;
+    }
+  }
+
+  .twitter { background: $twitter-color; }
+  .google-plus { background: $google-plus-color; }
+  .facebook { background: $facebook-color; }
+  .envelope { background: $envelope-color; }
+
+  @include media($min-tablet) {
+    float: left;
+    width: 50%;
+    padding-right: $small-spacing;
+  }
+}

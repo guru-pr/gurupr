@@ -1,0 +1,96 @@
+%btn {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: $white-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  transition: transform $base-duration $base-timing, color $base-duration $base-timing, background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: 0 3px 0 darken($primary-color, 20%);
+
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: $white-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+  &:active {
+    transform: scale(.9);
+  }
+
+  &.btn-ghost {
+    background-color: transparent;
+    border: 2px solid $action-color;
+    color: $action-color;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white-color, .3);
+      border-color: shade($action-color, 30%);
+      color: shade($action-color, 30%);
+    }
+  }
+}
+
+
+input[type="submit"],
+button[type="submit"],
+.btn-more-details,
+.btn-add,
+.btn-edit,
+.btn-back,
+.btn-delete,
+.atc-style-button-icon {
+  @extend %btn;
+}
+
+.btn-edit {
+  background-color: lighten($blue-color, 20%);
+  box-shadow: 0 3px 0 darken($blue-color, 10%);
+
+  &:hover {
+    background-color: lighten($blue-color, 10%);
+  }
+}
+
+.btn-small {
+  padding: ($small-spacing/2);
+  font-size: 12px;
+}
+
+.btn-back {
+  @extend .btn-small;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid $light-gray-color;
+  color: $light-gray-color;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white-color, .3);
+    border-color: shade($light-gray-color, 30%);
+    color: shade($light-gray-color, 30%);
+  }
+}

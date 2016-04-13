@@ -11,12 +11,14 @@ nav.navbar.navbar-default
       = link_to 'GURU-PR', root_path, class: 'navbar-brand'
 
     #navbar.navbar-collapse.collapse
-      ul.nav.navbar-nav
-        li = link_to t('.events'), events_path
-      ul.nav.navbar-nav.navbar-right
+      ul.guru-nav
+        li = link_to events_path do
+          = fa_icon 'calendar', text: t('.events')
         - if user_signed_in?
           = render 'shared/admin_nav' if admin_signed_in?
-          li = link_to t('.exit'), logout_path, method: :delete
+          li
+            = link_to logout_path, method: :delete do
+              = fa_icon 'sign-out', text: t('.exit')
         - else
           li
             = link_to join_path do

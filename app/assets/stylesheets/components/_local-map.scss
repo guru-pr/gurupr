@@ -1,0 +1,20 @@
+
+.local-map {
+  width: 100%;
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include media($min-tablet) {
+    float: right;
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    padding-right: $small-spacing;
+  }
+}
