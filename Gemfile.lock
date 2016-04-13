@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/enriclluelles/route_translator.git
-  revision: f0ff66b161c020ca523cb5e094c11d0b72eea5ce
+  revision: 238eb94cccfc756c40056e19bdc0518a899a3d20
   branch: feature/rails5
   specs:
     route_translator (5.0.0.alpha1)
