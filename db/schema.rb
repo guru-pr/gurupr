@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -26,9 +25,8 @@ ActiveRecord::Schema.define(version: 20150218190831) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "summary"
+    t.index ["slug"], name: "index_events_on_slug", unique: true, using: :btree
   end
-
-  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
@@ -40,8 +38,7 @@ ActiveRecord::Schema.define(version: 20150218190831) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.boolean  "admin",      default: false
+    t.index ["provider", "uid"], name: "index_users_on_provider_and_uid", using: :btree
   end
-
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", using: :btree
 
 end

@@ -43,7 +43,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_summary',     with: 'Oh bla dih, oh bla dah'
       fill_in 'event_description', with: 'Oh bla dih, oh bla dah'
 
-      click_button create_text(Event)
+      find('input[type="submit"]').click
 
       expect(page).to have_content 'Event #1'
       expect(page).to have_content 'Local #1'
@@ -51,7 +51,8 @@ feature 'Admin events', :omniauth do
 
     scenario 'add fails incomplete event' do
       visit '/admin/events/new'
-      click_button create_text(Event)
+
+      find('input[type="submit"]').click
 
       expect(page).to have_content(error_text_for :blank)
     end
@@ -65,7 +66,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_local',       with: 'Local #1.1'
       fill_in 'event_address',     with: 'Address #1.1'
 
-      click_button update_text(Event)
+      find('input[type="submit"]').click
 
       expect(page).to have_content 'Event #1.1'
       expect(page).to have_content 'Local #1.1'
@@ -77,7 +78,7 @@ feature 'Admin events', :omniauth do
 
       visit "/admin/events/#{event.slug}/edit"
       fill_in 'event_name', with: ''
-      click_button update_text(Event)
+      find('input[type="submit"]').click
 
       expect(page).to have_content(error_text_for :blank)
     end
