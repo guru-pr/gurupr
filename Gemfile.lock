@@ -55,7 +55,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    arel (7.1.1)
+    arel (7.1.2)
     autoprefixer-rails (6.4.1.1)
       execjs
     bootstrap-sass (3.3.7)
