@@ -32,7 +32,7 @@ gem 'redis', '~> 3.0'
 # frontend
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
-gem 'font-awesome-rails', '~> 4.5.0'
+gem 'font-awesome-rails', '~> 4.6'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.3.1'
 gem 'draper', github: 'audionerd/draper', branch: 'rails5' # TODO Back to official
