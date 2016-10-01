@@ -25,6 +25,8 @@ Event.create do |e|
   e.occurred_at = Date.today.next_month
   e.address = 'Shopping Itália, Curitiba, Paraná'
   e.local = 'Shopping Itália'
+  e.organizer = 'Roger Waters'
+  e.duration = 7
 
   e.summary = <<-END.strip_heredoc
     Agenda fechada!
@@ -39,6 +41,4 @@ Event.create do |e|
     - **09:00 - 09:20** - Credenciamento
     - **09:20 - 09:30** - Abertura
   END
-
-  e.options = { certificate: { organizer_name: 'Roger Waters', duration: 7 } }
 end

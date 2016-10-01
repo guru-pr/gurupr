@@ -1,6 +1,9 @@
 class Event < ApplicationRecord
   extend FriendlyId
+
   friendly_id :name, use: :slugged
+
+  mount_uploader :certificate_cover, CertificateCoverUploader
 
   validates :name,        presence: true, uniqueness: true
   validates :slug,        presence: true, uniqueness: true
