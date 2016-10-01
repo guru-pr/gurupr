@@ -50,7 +50,7 @@ gem 'friendly_id'
 gem 'route_translator'
 
 # Collection of locale
-gem 'rails-i18n', '~> 4.0.0'
+gem 'rails-i18n', '~> 5.0'
 
 # Errors and exceptions
 gem 'rollbar'
