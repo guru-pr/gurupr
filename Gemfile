@@ -45,6 +45,10 @@ gem 'omniauth-github'
 # Friendly forms
 gem 'simple_form'
 
+# Image upload
+gem 'carrierwave'
+gem 'cloudinary'
+
 # SEO
 gem 'friendly_id'
 gem 'route_translator'
