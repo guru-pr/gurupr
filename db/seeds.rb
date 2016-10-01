@@ -39,4 +39,6 @@ Event.create do |e|
     - **09:00 - 09:20** - Credenciamento
     - **09:20 - 09:30** - Abertura
   END
+
+  e.options = { certificate: { organizer_name: 'Roger Waters', duration: 7 } }
 end
