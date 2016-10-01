@@ -28,5 +28,16 @@
         = f.input :description, label: false, input_html: { rows: 15 }
       .tab-pane[id='event_description_preview'] = t('.loading')
 
+  fieldset
+    legend = t('.certificate_options')
+    = f.input :organizer
+    = f.input :duration
+    .form-group.integer.optional.event_certificate_cover
+      = f.label :certificate_cover
+      - if @event.certificate_cover?
+        = image_tag(@event.certificate_cover_url)
+      = f.hidden_field :certificate_cover_cache
+      = f.file_field :certificate_cover
+
   = f.submit class: "pull-right"
   = link_to t('.back'), admin_events_path, class: 'btn-back pull-left'

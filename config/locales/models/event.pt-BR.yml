@@ -10,3 +10,6 @@ pt-BR:
         occurred_at: Ocorrido em
         summary: Resumo
         description: Descrição
+        duration: Duração
+        organizer: Organizador
+        certificate_cover: Capa do certificado

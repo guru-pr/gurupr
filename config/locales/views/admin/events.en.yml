@@ -19,6 +19,7 @@ en:
         preview: Preview
         back: Back
         loading: Loading...
+        certificate_options: Certificate options
       new:
         title: Add event
         subtitle: Adding new event

@@ -19,6 +19,7 @@ pt-BR:
         preview: Visualização
         back: Voltar
         loading: Carregando...
+        certificate_options: Opções do certificado
       new:
         title: Adicionar evento
         subtitle: Adicionando um novo evento
