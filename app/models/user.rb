@@ -6,6 +6,8 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :image,    presence: true
 
+  has_many :certificates
+
   scope :admin,  -> { where(admin: true) }
   scope :normal, -> { where(admin: false) }
 

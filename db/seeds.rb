@@ -25,6 +25,8 @@ Event.create do |e|
   e.occurred_at = Date.today.next_month
   e.address = 'Shopping Itália, Curitiba, Paraná'
   e.local = 'Shopping Itália'
+  e.organizer = 'Roger Waters'
+  e.duration = 7
 
   e.summary = <<-END.strip_heredoc
     Agenda fechada!

@@ -10,6 +10,8 @@ RSpec.describe User, type: :model do
   it { is_expected.to validate_presence_of(:nickname) }
   it { is_expected.to validate_presence_of(:image) }
 
+  it { is_expected.to have_many(:certificates) }
+
   context 'scopes' do
     let!(:normal) { create(:user) }
     let!(:admin)  { create(:user_admin) }

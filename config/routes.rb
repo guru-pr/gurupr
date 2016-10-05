@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get    '/auth/failure',            to: 'sessions#failure'
 
   localized do
-    resources :events, only: [:index, :show]
+    resources :events,       only: [:index, :show]
+    resources :certificates, only: :show
   end
 
   namespace :admin do
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
       resource :accesses, only: [:create, :destroy]
     end
 
-    resources :events, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :events, except: :show
   end
 
   root 'welcome#index'

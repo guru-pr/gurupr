@@ -1,3 +1,4 @@
 pt-BR:
   routes:
     events: eventos
+    certificates: certificados

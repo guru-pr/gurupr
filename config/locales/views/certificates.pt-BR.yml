@@ -1,0 +1,7 @@
+pt-BR:
+  certificates:
+    pdf:
+      title: 'Certificado'
+      description: 'Certificamos que <strong><em>%{participant_name}</em></strong> participou do <em>%{event_name}</em>, realizado em %{event_occurred_at} no %{event_local}, com carga horária total de %{event_duration} horas, na qualidade de participante.'
+      organizer: 'Organizador'
+      footer: 'Certificado gerado em %{created_at} pode ser verificado em <a href="%{certificate_url}"><u>%{certificate_url}</u></a>'
