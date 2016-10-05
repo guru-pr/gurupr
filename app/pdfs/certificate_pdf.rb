@@ -12,25 +12,37 @@ class CertificatePDF < Prawn::Document
   def initialize(certificate)
     super(PDF_OPTIONS)
 
-    image open('2o-tech-day.jpg'), width: 450, align: :center
+    image open(certificate.cover_url), width: 450, align: :center
 
     move_up 40
     fill_color 'ffffff'
-    text 'Certificado', size: 20, align: :center
+    text I18n.t('.certificates.pdf.title'), size: 20, align: :center
 
     fill_color '40464e'
 
     move_down 40
-    text "Certificamos que <strong><em>#{certificate.participant_name}</em></strong> participou do <em>#{certificate.event_name}</em>, realizado em #{I18n.l certificate.event_occurred_at.to_date, format: :long} no #{certificate.event_local}, com carga horária total de #{certificate.event_duration} horas, na qualidade de participante.", inline_format: true
+    text I18n.t('.certificates.pdf.description',
+                participant_name: certificate.participant_name,
+                event_name: certificate.event_name,
+                event_occurred_at: I18n.l(certificate.event_occurred_at.to_date, format: :long),
+                event_local: certificate.event_local,
+                event_duration: certificate.event_duration),
+         inline_format: true
 
     move_down 15
     text "Curitiba, #{I18n.l certificate.event_occurred_at.to_date, format: :long}."
 
     move_down 30
     text certificate.event_organizer, align: :center
-    text 'Organizador', align: :center
+    text I18n.t('.certificates.pdf.organizer'), align: :center
 
     move_down 30
-    text "O código de autenticação <strong>#{certificate.id}</strong> gerado em #{certificate.created_at} pode ser verificado em <a href='http://gurupr.org/'><u>http://gurupr.org</u></a>", align: :right, size: 5, inline_format: true
+    text I18n.t('.certificates.pdf.footer', created_at: certificate.created_at, certificate_url: certificate_url(certificate)), align: :right, size: 5, inline_format: true
+  end
+
+  private
+
+  def certificate_url(certificate)
+    Rails.application.routes.url_helpers.certificate_url(certificate)
   end
 end

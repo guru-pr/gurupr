@@ -1,0 +1,7 @@
+en:
+  certificates:
+    pdf:
+      title: 'Certificate'
+      description: 'We certify that <strong><em>%{participant_name}</em></strong> attended the <em>%{event_name}</em>, held on %{event_occurred_at} in %{event_local} with total workload of %{event_duration} hours, as a participant.'
+      organizer: 'Organizer'
+      footer: 'Certificate generated on %{created_at} can be verified in <a href="%{certificate_url}"><u>%{certificate_url}</u></a>'
