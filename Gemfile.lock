@@ -209,7 +209,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rollbar (2.13.2)
+    rollbar (2.13.3)
       multi_json
     route_translator (5.0.2)
       actionpack (>= 5.0.0, < 5.1)
