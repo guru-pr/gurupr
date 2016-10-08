@@ -1,6 +1,8 @@
 = content_for :header
   - if @next_event
     = render 'events/banner', event: @next_event
+  - else
+    = render 'tweets'
 
 section.members
   h3
