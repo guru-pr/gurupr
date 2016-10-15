@@ -9,23 +9,25 @@ Utilizamos:
 
 De resto, vamos desenvolvendo aos poucos!
 
-## Instalação
+## Instalação normal
 
 ```bash
 cp .env.example .env # altere as chaves caso queira trocar a aplicação
 cp config/database.yml.example config/database.yml # configure seus dados de acesso ao DB
 bundle install
-rake db:create db:migrate
+rake db:setup
 rails server
 ```
 
-## Feito
+## Instalação via docker
 
-- ~~Configurar timezone para `Brasilia`~~
-- ~~Melhorar specs~~
-- ~~Mini administração para eventos~~
-- ~~Adicionar eventos~~
-- ~~Travis!~~
-- ~~Codeclimate!~~
-- ~~Adicionar [ribbon](https://github.com/blog/273-github-ribbons)~~
-- ~~Fazer o layout~~
+```bash
+cp .env.example .env # altere as chaves caso queira trocar a aplicação
+docker-compose build
+docker-compose run --rm web rake db:setup
+docker-compose up
+```
+
+## Contribuindo
+
+Dê uma olhada nas [issues](https://github.com/guru-pr/gurupr/issues) abertas ou comente lá se tiver alguma outra idéia... e manda vê! 😄
