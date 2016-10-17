@@ -24,7 +24,7 @@ rails server
 ```bash
 cp .env.example .env # altere as chaves caso queira trocar a aplicação
 docker-compose build
-docker-compose run --rm web rake db:setup
+docker-compose run --rm web rails db:setup db:migrate db:seed
 docker-compose up
 ```
 
