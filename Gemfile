@@ -35,7 +35,6 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails', '~> 4.6'
 gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.3.1'
-gem 'draper', '~> 3.0.0.pre1'
 
 gem 'activemodel-serializers-xml'
 

@@ -1,55 +1,67 @@
-class EventDecorator < ApplicationDecorator
-  include Draper::LazyHelpers
+class EventDecorator < DelegateClass(Event)
+  delegate :fa_icon, :link_to, :image_tag, :t, :l, :event_url, :concat, to: :@view_context
 
-  delegate :name, :slug, :persisted?
+  def initialize(obj, view_context)
+    super obj
+    @view_context = view_context
+  end
 
   def occurred_at
-    fa_icon 'calendar', text: l(object.occurred_at, format: '%a %d/%m/%Y %H:%M')
+    fa_icon 'calendar', text: l(__getobj__.occurred_at, format: '%a %d/%m/%Y %H:%M')
   end
 
   def local_link
-    link_to "https://www.google.com.br/maps/search/#{object.address}", target: '_blank' do
-      concat(fa_icon 'map-marker', text: object.local)
+    link_to "https://www.google.com.br/maps/search/#{address}", target: '_blank' do
+      concat(fa_icon 'map-marker', text: local)
     end
   end
 
   def local_map_link
-    link_to "https://www.google.com.br/maps/search/#{object.address}", target: '_blank' do
-      image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{object.address}&zoom=15&size=300x300&markers=color:0xCC342D|#{object.address}", class: 'map')
+    link_to "https://www.google.com.br/maps/search/#{address}", target: '_blank' do
+      image_tag("https://maps.googleapis.com/maps/api/staticmap?center=#{address}&zoom=15&size=300x300&markers=color:0xCC342D|#{address}", class: 'map')
     end
   end
 
   def summary
-    render_markdown object.summary
+    render_markdown __getobj__.summary
   end
 
   def description
-    render_markdown object.description
+    render_markdown __getobj__.description
   end
 
   def details_link
-    link_to t('events.banner.more_details'), object, class: 'btn-more-details'
+    link_to t('events.banner.more_details'), self, class: 'btn-more-details'
   end
 
   def calendar_properties
     @calendar_properties ||= OpenStruct.new(
-      date_start:  object.occurred_at,
-      date_end:    object.occurred_at + 2.hours, # TODO: Create new field for this?
+      date_start:  __getobj__.occurred_at,
+      date_end:    __getobj__.occurred_at + 2.hours, # TODO: Create new field for this?
       timezone:    Rails.configuration.time_zone,
-      title:       object.name,
-      description: object.description, # TODO: Convert to plain text
-      location:    object.address
+      title:       name,
+      description: __getobj__.description, # TODO: Convert to plain text
+      location:    address
     )
   end
 
   def share_buttons
-    url = event_url(object)
+    url = event_url(self)
 
     buttons = {
       'facebook'    => "http://www.facebook.com/sharer/sharer.php?u=#{url}",
-      'twitter'     => "http://twitter.com/share?url=#{url}&text=#{object.name}",
+      'twitter'     => "http://twitter.com/share?url=#{url}&text=#{name}",
       'google-plus' => "https://plus.google.com/share?url=#{url}",
-      'envelope'    => "mailto:?subject=#{object.name}&body=#{url}"
+      'envelope'    => "mailto:?subject=#{name}&body=#{url}"
     }
+  end
+
+  def renderer
+    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML, strikethrough: true)
+  end
+
+  def render_markdown(markdown)
+    return nil if markdown.blank?
+    renderer.render(markdown).html_safe
   end
 end

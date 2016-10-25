@@ -5,8 +5,8 @@ atom_feed do |feed|
   @events.each do |event|
     feed.entry event do |entry|
       entry.title event.name
-      entry.summary render_markdown(event.summary), type: 'html'
-      entry.content render_markdown(event.description), type: 'html'
+      entry.summary @markdown_renderer.render(event.summary).html_safe, type: 'html'
+      entry.content @markdown_renderer.render(event.description).html_safe, type: 'html'
       entry.author do |author|
         author.name 'GURU-PR'
       end

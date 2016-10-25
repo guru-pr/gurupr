@@ -14,4 +14,8 @@ class Event < ApplicationRecord
   validates :address,     presence: true
 
   scope :not_happened, -> { where('occurred_at > ?', Time.current.yesterday).order(occurred_at: :asc) }
+
+  def decorate(view_context)
+    EventDecorator.new(self, view_context)
+  end
 end
