@@ -69,7 +69,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    cloudinary (1.2.3)
+    cloudinary (1.2.4)
       aws_cf_signer
       rest-client
     codeclimate-test-reporter (0.6.0)
