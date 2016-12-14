@@ -1,4 +1,4 @@
-FROM ruby:2.3.1
+FROM ruby:2.3.3
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get update && apt-get install -y libc-ares2 libv8-3.14.5 postgresql-client nodejs --no-install-recommends && rm -rf /var/lib/apt/lists/*
