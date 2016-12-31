@@ -16,13 +16,18 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore enviroment files
+config/database.yml
 .env
 
+# Ignore backup files
 *.orig
 
+# Ignore project generated files
 coverage
 
-config/database.yml
+# Ignore IDE, text editor specific configurations
+.idea/
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
