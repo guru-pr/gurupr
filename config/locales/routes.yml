@@ -2,3 +2,4 @@ pt-BR:
   routes:
     events: eventos
     certificates: certificados
+    profile: perfil
