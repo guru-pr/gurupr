@@ -1,0 +1,12 @@
+en:
+  profiles:
+    show:
+      title: My Account
+      subtitle: Change your personal informations
+      certificates_title: My Certificates
+      no_certificates_html: "<p class=\"text-center\"> You have no certificates! </p>"
+    fields:
+      edit: Edit
+    form:
+      admin: You are a member with admin privileges!
+      save: Save Informations

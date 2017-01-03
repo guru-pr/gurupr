@@ -1,0 +1,15 @@
+= content_for :header do
+  .container
+    .page-header
+      h1 = t('.title')
+      small = t('.subtitle')
+
+.centered-card-profile
+  = render 'fields'
+
+section.certificates
+  h3 = t('.certificates_title')
+
+  .container
+    .certificates-grid
+      = render(partial: 'certificate', collection: current_user.certificates, cached: true) || t('.no_certificates_html')

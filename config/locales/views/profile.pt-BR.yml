@@ -1,0 +1,12 @@
+pt-BR:
+  profiles:
+    show:
+      title: Minha Conta
+      subtitle: Modifique suas informações pessoais
+      certificates_title: Meus Certificados
+      no_certificates_html: "<p class=\"text-center\">Você não possui nenhum certificado!</p>"
+    fields:
+      edit: Editar
+    form:
+      admin: Você é um membro com permissões de administrador.
+      save: Salvar Informações

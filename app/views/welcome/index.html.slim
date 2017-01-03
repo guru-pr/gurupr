@@ -9,4 +9,5 @@ section.members
     = t(".members")
     span.badge =< @members.size
 
-  = render 'shared/members_grid', members: @members
+  .members-grid
+    = render partial: 'shared/members_grid', collection: @members, as: :member, cached: true

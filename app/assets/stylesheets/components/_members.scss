@@ -1,9 +1,9 @@
-.members {
+.members, .certificates {
   h3 {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
-    margin: $base-spacing 0;
+    margin: ($base-spacing + 20) 0;
 
     .badge {
       font-size: .8rem;
@@ -11,7 +11,7 @@
   }
 }
 
-.members-grid {
+.members-grid, .member-page {
   text-align: center;
 
   p {

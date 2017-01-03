@@ -14,12 +14,11 @@ nav.navbar.navbar-default
       ul.guru-nav
         li = link_to events_path do
           = fa_icon 'calendar', text: t('.events')
+        - if admin_signed_in?
+          = render 'shared/admin_nav'
         - if user_signed_in?
-          = render 'shared/admin_nav' if admin_signed_in?
-          li
-            = link_to logout_path, method: :delete do
-              = fa_icon 'sign-out', text: t('.exit')
-        - else
+          = render 'shared/member_nav'
+        - unless user_signed_in?
           li
             = link_to join_path do
               = fa_icon 'github', text: t('.join')

@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   localized do
     resources :events,       only: [:index, :show]
     resources :certificates, only: :show
+    resource :profile,       only: [:show, :update, :edit]
   end
 
   namespace :admin do
-    resources :users, only: [:index] do
+    resources :users, only: :index do
       resource :accesses, only: [:create, :destroy]
     end
 

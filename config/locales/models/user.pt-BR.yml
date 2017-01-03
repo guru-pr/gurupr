@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Membro
+    attributes:
+      user:
+        name: Nome
+        email: E-Mail
+        certificates: Certificados

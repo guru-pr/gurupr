@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
     current_user.present?
   end
 
+  def authenticate_user!
+    redirect_to :root unless user_signed_in?
+  end
+
   def title
     title = @title || t('.title')
     title = @title || t('.title', options)

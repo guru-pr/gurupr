@@ -20,9 +20,11 @@ pt-BR:
         back: Voltar
         loading: Carregando...
         certificate_options: Opções do certificado
-      new:
+      new: &new
         title: Adicionar evento
         subtitle: Adicionando um novo evento
-      edit:
+      edit: &edit
         title: 'Alterar evento: %{name}'
         subtitle: Alterando os dados do evento
+      create: *new
+      update: *edit
