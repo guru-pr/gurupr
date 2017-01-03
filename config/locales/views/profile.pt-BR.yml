@@ -2,3 +2,10 @@ pt-BR:
   profile:
     show:
       title: Minha Conta
+      subtitle: Modifique suas informações pessoais
+      certificates_title: Meus Certificados
+    fields:
+      edit: Editar
+    form:
+      admin: Você é um membro com permissões de administrador.
+      save: Salvar Informações
