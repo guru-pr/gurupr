@@ -11,4 +11,4 @@ section.certificates
   h3 = t('.certificates_title')
 
   .container
-    = render partial: 'certificate', collection: current_user.certificates, cached: true
+    = render(partial: 'certificate', collection: current_user.certificates, cached: true) || t('.no_certificates_html')
