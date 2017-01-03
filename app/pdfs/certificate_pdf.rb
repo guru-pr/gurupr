@@ -15,7 +15,7 @@ class CertificatePDF < Prawn::Document
 
     @certificate = certificate
 
-    %i(first second third fourth fifth sixty).each do |line_n|
+    %i(first second third fourth fifth sixth).each do |line_n|
       send "#{line_n}_line"
     end
   end
@@ -56,7 +56,7 @@ class CertificatePDF < Prawn::Document
     text I18n.t('.certificates.pdf.organizer'), align: :center
   end
 
-  def sixty_line
+  def sixth_line
     move_down 30
     text I18n.t('.certificates.pdf.footer',
                 created_at: certificate.created_at, align: :right, size: 5,
