@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :events,       only: [:index, :show]
     resources :certificates, only: :show
     get '/profile',          to: 'profile#show'
-    get '/profile/update',   to: 'profile#update'
+    patch '/profile',        to: 'profile#update'
+    get '/profile/edit',     to: 'profile#edit'
   end
 
   namespace :admin do

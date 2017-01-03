@@ -1,0 +1,11 @@
+.profile-form
+  = simple_form_for current_user, as: :profile, url: profile_path, remote: true do |f|
+    .member-page.profile-image
+      = image_tag_for(current_user)
+
+    - if admin_signed_in?
+      p.admin-text.text-center
+        = fa_icon 'lock', text: t('.admin')
+
+    = f.input :name, required: true
+    = f.submit t('.save'), class: 'btn-add btn-small btn-block'

@@ -1,0 +1,19 @@
+#profile_fields
+  .member-page.profile-image
+    = image_tag_for(current_user)
+
+  .container
+    .line
+      = fa_icon 'user-o fw'
+      = current_user.name
+
+    .line
+      = fa_icon 'envelope-o fw'
+      = truncate current_user.email, length: 28
+
+    .line
+      = fa_icon 'github fw'
+      = current_user.nickname
+
+  .line-button.text-center
+    = link_to t('.edit'), profile_edit_path, remote: true, class: 'btn-add btn-small btn-profile-edit'
