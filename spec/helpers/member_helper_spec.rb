@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe MemberHelper, type: :helper do
-  let(:member) { create(:user, name: 'User Name', nickname: 'nick_name') }
+  let(:member) { build(:user, name: 'User Name', nickname: 'nick_name') }
 
   describe '#image_tag_for' do
     it 'returns the content with link and target' do
