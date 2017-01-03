@@ -1,0 +1,8 @@
+li.member-nav.dropdown
+  a.dropdown-toggle[href="#" data-toggle="dropdown"]
+    = fa_icon 'at', text: raw("#{current_user.nickname} #{fa_icon('caret-down')}")
+  ul.dropdown-menu
+    li = link_to profile_path do
+      = fa_icon 'id-card-o fw', text: t('.profile')
+    li = link_to logout_path, method: :delete do
+      = fa_icon 'sign-out fw', text: t('.sign_out')

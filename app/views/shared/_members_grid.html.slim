@@ -1,6 +1,4 @@
 /! shared/members_grid
-.members-grid
-  - members.each do |member|
-    = link_to "https://github.com/#{member.nickname}", class: "member", style: "background-image: url(#{member.image})", title: "#{member.name}", target: "_blank" do
-      p.name = member.name
+- cache member do
+  = image_tag_for(member, github_link: true)
 /! shared/members_grid
