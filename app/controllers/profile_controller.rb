@@ -1,8 +1,9 @@
 class ProfileController < ApplicationController
   before_action :authenticate_user!
 
-  def show
-  end
+  def edit; end
+
+  def show; end
 
   def update
     current_user.update_attributes(profile_params)

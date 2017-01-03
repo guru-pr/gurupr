@@ -1,0 +1,78 @@
+$min-form-margin: 98%;
+
+@mixin border-n-shadow() {
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #888888;
+  border-bottom: 2px solid $primary-color;
+}
+
+.profile-form {
+  width: $min-form-margin;
+  margin-left: 3px;
+}
+
+.admin-text {
+  color: $primary-color;
+  font-size: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.profile-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.centered-card-profile {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  background-color: #f8fafd;
+  height: 340px;
+  padding-top: 8px;
+
+  @include border-n-shadow;
+
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.card-certificate {
+  background-size: 100% 100%;
+  display: inline-block;
+  margin: 8px 6.6px;
+  width: 308px;
+  height: 210px;
+
+  @include border-n-shadow;
+}
+
+.line {
+  margin-top: 3px;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.line-button {
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+.btn-profile-edit {
+  width: $min-form-margin;
+}
+
+#profile_fields {
+  font-size: $unit-font-size;
+}
