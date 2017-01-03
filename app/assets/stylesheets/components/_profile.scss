@@ -45,14 +45,52 @@ $min-form-margin: 98%;
   transform: translate(-50%, 0%);
 }
 
+.certificates-grid {
+
+  p {
+    text-align: center;
+    position: absolute;
+    vertical-align: middle;
+    background-color: rgba($black-color, 0.8);
+    line-height: 200px;
+    color: $white-color;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+  }
+}
+
 .card-certificate {
   background-size: 100% 100%;
-  display: inline-block;
   margin: 8px 6.6px;
   width: 308px;
   height: 210px;
+  color: $white-color;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  opacity: .8;
 
   @include border-n-shadow;
+
+  &,
+  p {
+    @include transition(opacity 0.5s);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &,
+    p {
+      opacity: 1;
+    }
+  }
 }
 
 .line {
