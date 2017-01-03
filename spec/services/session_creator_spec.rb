@@ -7,6 +7,12 @@ RSpec.describe SessionCreator, :omniauth do
 
   context 'when user not exist' do
     let(:user) { build(:user) }
+    let(:opts) do
+      {
+        content_type: :json, accept: :json,
+        Authorization: "Bearer #{ENV['SENDGRID_API_KEY']}"
+      }
+    end
 
     before do
       allow(RestClient).to receive(:post)
@@ -27,8 +33,12 @@ RSpec.describe SessionCreator, :omniauth do
 
     it 'register email in newsletter' do
       url = 'https://api.sendgrid.com/v3/contactdb/recipients'
-      data = [{ email: user.email, first_name: user.name.split.first, last_name: user.name.split.last }].to_json
-      opts = { content_type: :json, accept: :json, Authorization: "Bearer #{ENV['SENDGRID_API_KEY']}" }
+      data = [
+        {
+          email: user.email, first_name: user.name.split.first,
+          last_name: user.name.split.last
+        }
+      ].to_json
 
       expect(RestClient).to receive(:post).with(url, data, opts)
 

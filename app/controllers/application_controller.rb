@@ -10,15 +10,13 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    begin
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
-    rescue Exception => e
-      nil
-    end
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  rescue ActiveRecord::RecordNotFound
+    nil
   end
 
   def admin_signed_in?
-    user_signed_in? and current_user.admin?
+    user_signed_in? && current_user.admin?
   end
 
   def authenticate_admin!
@@ -34,7 +32,6 @@ class ApplicationController < ActionController::Base
   end
 
   def title
-    title = @title || t('.title')
     title = @title || t('.title', options)
 
     "#{title} - #{t('layouts.application.title_suffix')}"

@@ -54,7 +54,7 @@ feature 'Admin events', :omniauth do
 
       find('input[type="submit"]').click
 
-      expect(page).to have_content(error_text_for :blank)
+      expect(page).to have_content(error_text_for(:blank))
     end
 
     scenario 'edit event' do
@@ -80,7 +80,7 @@ feature 'Admin events', :omniauth do
       fill_in 'event_name', with: ''
       find('input[type="submit"]').click
 
-      expect(page).to have_content(error_text_for :blank)
+      expect(page).to have_content(error_text_for(:blank))
     end
 
     scenario 'destroy event' do

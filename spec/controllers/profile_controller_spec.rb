@@ -56,7 +56,7 @@ RSpec.describe ProfileController, type: :controller do
   describe 'GET #update' do
     context 'logged in' do
       let(:valid_params) do
-        { params: { profile: { name: 'New Name' } }, xhr: true }
+        { profile: { name: 'New Name' } }
       end
 
       before do
@@ -64,13 +64,13 @@ RSpec.describe ProfileController, type: :controller do
       end
 
       it 'needs to be success' do
-        patch :update, valid_params
+        patch :update, params: valid_params, xhr: true
 
         expect(response).to be_success
       end
 
       it 'updates the current user with provided params' do
-        patch :update, valid_params
+        patch :update, params: valid_params, xhr: true
 
         expect(user.reload.name).to eq('New Name')
       end

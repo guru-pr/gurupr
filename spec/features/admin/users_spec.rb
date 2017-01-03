@@ -22,8 +22,13 @@ feature 'Admin users', :omniauth do
 
     visit '/admin/users'
 
-    # TODO: Improve this... (;
-    expect(first("a[href='/admin/users/#{admin.id}/accesses']")['class']).to include 'btn-revoke'
-    expect(first("a[href='/admin/users/#{normal.id}/accesses']")['class']).to include 'btn-grant'
+    expect(get_class_from_tag(admin)).to include 'btn-revoke'
+    expect(get_class_from_tag(normal)).to include 'btn-grant'
+  end
+
+  protected
+
+  def get_class_from_tag(user)
+    first("a[href='/admin/users/#{user.id}/accesses']")['class']
   end
 end

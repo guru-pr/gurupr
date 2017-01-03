@@ -17,7 +17,6 @@ RSpec.describe User, type: :model do
     let!(:admin)  { create(:user_admin) }
 
     context '.admin' do
-
       it 'only one user' do
         expect(User.admin.count).to eq 1
       end

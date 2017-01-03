@@ -13,5 +13,7 @@ class Event < ApplicationRecord
   validates :local,       presence: true
   validates :address,     presence: true
 
-  scope :not_happened, -> { where('occurred_at > ?', Time.current.yesterday).order(occurred_at: :asc) }
+  scope :not_happened, lambda {
+    where('occurred_at > ?', Time.current.yesterday).order(occurred_at: :asc)
+  }
 end

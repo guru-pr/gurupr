@@ -13,5 +13,7 @@ RSpec.describe Certificate, type: :model do
   it { is_expected.to delegate_method(:organizer).to(:event).with_prefix }
   it { is_expected.to delegate_method(:duration).to(:event).with_prefix }
 
-  it { is_expected.to delegate_method(:name).to(:user).with_prefix(:participant) }
+  it do
+    is_expected.to delegate_method(:name).to(:user).with_prefix(:participant)
+  end
 end
