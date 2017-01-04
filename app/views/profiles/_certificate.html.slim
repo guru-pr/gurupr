@@ -1,0 +1,5 @@
+- cache certificate do
+  = link_to certificate_url(certificate), class: 'card-certificate', style: "background-image: url(#{certificate.cover_url})", target: '_blank', title: certificate.event.name do
+    p
+      button.btn-add.btn-small type="button"
+        = fa_icon 'download fw', text: 'Download'

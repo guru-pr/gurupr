@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   localized do
     resources :events,       only: [:index, :show]
     resources :certificates, only: :show
-    get '/profile',          to: 'profile#show'
-    patch '/profile',        to: 'profile#update'
-    get '/profile/edit',     to: 'profile#edit'
+    resource :profile,       only: [:show, :update, :edit]
   end
 
   namespace :admin do
