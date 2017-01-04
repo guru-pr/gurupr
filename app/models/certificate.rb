@@ -5,8 +5,8 @@ class Certificate < ApplicationRecord
   belongs_to :user
   belongs_to :event
 
-  delegate :name, :local, :occurred_at, :organizer, :duration, to: :event, prefix: true
-
+  delegate :name, :local, :occurred_at, :organizer, :duration,
+           to: :event, prefix: true
   delegate :name, to: :user, prefix: :participant
 
   def cover_url

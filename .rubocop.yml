@@ -1,0 +1,18 @@
+Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'Gemfile.lock'
+    - 'bin/**/*'
+    - 'config/initializers/simple_form**'
+
+Rails:
+  Enabled: true
+
+Rails/OutputSafety:
+  Enabled: false

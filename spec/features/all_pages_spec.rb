@@ -27,12 +27,12 @@ describe 'All pages' do
 
   context 'Event list' do
     it 'Shows name' do
-      visit "/events/"
+      visit '/events/'
       expect(page).to have_content event.name
     end
 
     it 'Shows summary' do
-      visit "/events/"
+      visit '/events/'
       expect(page).to have_content 'summary'
     end
   end
@@ -40,7 +40,7 @@ describe 'All pages' do
   context 'Event show' do
     it 'Shows name in title' do
       visit "/events/#{event.slug}"
-      expect(page.title).to include "#{event.name}"
+      expect(page.title).to include event.name.to_s
     end
 
     it 'Shows name' do

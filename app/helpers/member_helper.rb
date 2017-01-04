@@ -13,8 +13,9 @@ module MemberHelper
   private
 
   def content_to_link_by(member, options)
-    link_to options[:link], target: options[:target], title: member.name,
-            class: 'member', style: "background-image: url(#{member.image})" do
+    link_to options[:link],
+            target: options[:target], title: member.name, class: 'member',
+            style: "background-image: url(#{member.image})" do
 
       content_tag(:p, member.name, class: :name)
     end

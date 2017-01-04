@@ -61,7 +61,9 @@ module Admin
     end
 
     def event_params
-      params.require(:event).permit(:name, :local, :address, :occurred_at, :summary, :description, :organizer, :duration, :certificate_cover)
+      params.require(:event)
+            .permit(:name, :local, :address, :occurred_at, :summary, :duration,
+                    :description, :organizer, :certificate_cover)
     end
   end
 end

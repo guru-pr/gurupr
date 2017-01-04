@@ -19,7 +19,8 @@ feature 'Join', :omniauth do
   scenario 'user can not join using invalid session' do
     sign_in(create(:user))
 
-    expect(User).to receive(:find).and_raise(:exception).exactly(3).times
+    expect(User).to receive(:find)
+      .and_raise(ActiveRecord::RecordNotFound).exactly(3).times
 
     visit '/'
 

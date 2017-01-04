@@ -11,8 +11,8 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
 gem 'bourbon'
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Turbolinks makes following links in your web application faster.
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -29,11 +29,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'redis', '~> 3.0'
 
 # frontend
-gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.1'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'slim', '~> 3.0.1'
 gem 'redcarpet', '~> 3.3.1'
+gem 'slim', '~> 3.0.1'
 
 gem 'activemodel-serializers-xml'
 
@@ -67,10 +67,11 @@ group :development, :test do
   # Environment variables
   gem 'dotenv-rails'
 
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution to debug into a console
   gem 'byebug', platform: :mri
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running
+  # in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
   # Setup easier than pg for development
@@ -84,11 +85,11 @@ end
 
 group :test do
   # Specs
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'capybara'
 
   # Coverage
   gem 'codeclimate-test-reporter', require: nil
