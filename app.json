@@ -3,7 +3,13 @@
   "scripts": {
   },
   "env": {
+    "CLOUDINARY_URL": {
+      "required": true
+    },
     "DATABASE_URL": {
+      "required": true
+    },
+    "DEFAULT_URL": {
       "required": true
     },
     "GITHUB_KEY": {
