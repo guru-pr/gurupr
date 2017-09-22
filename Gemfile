@@ -99,4 +99,4 @@ group :production do
   # The twelve-factor app
   gem 'rails_12factor'
 end
-gem 'nokogiri', '>= 1.7.2'
+gem 'nokogiri', '>= 1.8.1'
