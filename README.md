@@ -3,7 +3,7 @@
 Site of the Ruby users group from Paraná - Brazil!
 
 We use:
-- authentication
+- Github for authentication
 - Heroku
 - PostgreSQL
 
