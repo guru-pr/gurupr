@@ -1,6 +1,6 @@
 # GURU-PR [![Build Status](https://travis-ci.org/guru-pr/gurupr.svg?branch=master)](https://travis-ci.org/guru-pr/gurupr) [![Code Climate](https://codeclimate.com/github/guru-pr/gurupr/badges/gpa.svg)](https://codeclimate.com/github/guru-pr/gurupr) [![Test Coverage](https://codeclimate.com/github/guru-pr/gurupr/badges/coverage.svg)](https://codeclimate.com/github/guru-pr/gurupr) [![Dependency Status](https://img.shields.io/gemnasium/guru-pr/gurupr.svg)](https://gemnasium.com/guru-pr/gurupr)
 
-Site of the Ruby users group from Paraná - Brazil!
+Site of the Ruby users group of Paraná
 
 We use:
 - Github for authentication
@@ -9,7 +9,7 @@ We use:
 
 Otherwise, let's develop in baby steps!
 
-## Common install
+## Running on your local machine
 
 ```bash
 cp .env.example .env # edit the keys in case you want to change the application
@@ -19,7 +19,7 @@ rake db:setup
 rails server
 ```
 
-## Docker install
+## Running on Docker
 
 ```bash
 cp .env.example .env # edit the keys in case you want to change the application
@@ -30,4 +30,4 @@ docker-compose up
 
 ## Contributing
 
-Take a look at the opened [issues](https://github.com/guru-pr/gurupr/issues), comment sugestions or new ideas... and enjoy! 😄
+Take a look at the opened [issues](https://github.com/guru-pr/gurupr/issues). Add comments or sugestions, bring your ideas... and let's roll! 😄
