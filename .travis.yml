@@ -1,8 +1,10 @@
 language: ruby
 rvm:
-- 2.3.3
+- 2.3.5
+services:
+  - postgresql
 addons:
-  postgresql: '9.3'
+  postgresql: '9.6'
 script:
 - bundle exec rake db:migrate RAILS_ENV=test
 - bundle exec rspec
