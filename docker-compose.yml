@@ -15,11 +15,11 @@ web:
     - db
 
 db_data:
-  image: postgres:9.4.5
+  image: postgres:9.6.4-alpine
   entrypoint: /bin/bash
 
 db:
-  image: postgres:9.4.5
+  image: postgres:9.6.4-alpine
   volumes_from:
     - db_data
   environment:
