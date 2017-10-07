@@ -57,9 +57,9 @@ class CertificatePDF < Prawn::Document
   end
 
   def sixth_line
-    move_down 30
+    move_down 15
     text I18n.t('.certificates.pdf.footer',
-                created_at: certificate.created_at, align: :right, size: 5,
+                created_at: as_long_date(certificate.created_at), align: :right, size: 5,
                 certificate_url: certificate_url(certificate)),
          inline_format: true
   end
