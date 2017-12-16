@@ -5,11 +5,11 @@ ruby '2.3.5'
 gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.1'
+gem 'rails', '~> 5.2.0.beta2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'bourbon'
 gem 'sass-rails', '~> 5.0'
@@ -26,7 +26,16 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Action Cable dependencies for the Redis adapter
-gem 'redis', '~> 3.0'
+gem 'redis', '~> 4.0'
+
+# See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'mini_racer', platforms: :ruby
+
+# Use ActiveStorage variant
+# gem 'mini_magick', '~> 4.8'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 
 # frontend
 gem 'autoprefixer-rails'
@@ -63,12 +72,15 @@ gem 'prawn'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'nokogiri', '>= 1.8.1'
+gem 'listen'
+
 group :development, :test do
   # Environment variables
   gem 'dotenv-rails'
 
   # Call 'byebug' anywhere in the code to stop execution to debug into a console
-  gem 'byebug', platform: :mri
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   # Spring speeds up development by keeping your application running
   # in the background. Read more: https://github.com/rails/spring
@@ -79,13 +91,16 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console'
 end
 
 group :test do
-  # Specs
-  gem 'capybara'
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '~> 2.15'
+  gem 'selenium-webdriver'
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
@@ -99,5 +114,3 @@ group :production do
   # The twelve-factor app
   gem 'rails_12factor'
 end
-gem 'nokogiri', '>= 1.8.1'
-gem 'listen'
