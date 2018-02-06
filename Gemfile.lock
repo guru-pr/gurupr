@@ -161,7 +161,7 @@ GEM
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.2.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
@@ -347,7 +347,7 @@ DEPENDENCIES
   jquery-rails
   listen
   mini_racer
-  nokogiri (>= 1.8.1)
+  nokogiri (>= 1.8.2)
   omniauth-github
   pg (~> 0.21)
   prawn
@@ -374,6 +374,5 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.3.5p376
-
 BUNDLED WITH
    1.16.0
