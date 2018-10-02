@@ -5,9 +5,9 @@ ruby '2.3.5'
 gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0.beta2'
+gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -42,7 +42,7 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'redcarpet', '~> 3.4.0'
-gem 'slim', '~> 3.0.1'
+gem 'slim', '~> 4.0'
 
 gem 'activemodel-serializers-xml'
 
@@ -97,11 +97,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.15'
+  gem 'capybara', '~> 3.8'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'database_cleaner'
+  # https://stackoverflow.com/q/51762108
+  gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
