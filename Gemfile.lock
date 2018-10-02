@@ -236,7 +236,7 @@ GEM
       netrc (~> 0.8)
     rollbar (2.15.5)
       multi_json
-    route_translator (5.6.0)
+    route_translator (5.6.3)
       actionpack (>= 5.0.0.1, < 6)
       activesupport (>= 5.0.0.1, < 6)
     rspec-core (3.7.1)
