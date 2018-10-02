@@ -188,7 +188,7 @@ GEM
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
     public_suffix (3.0.2)
-    puma (3.11.3)
+    puma (3.12.0)
     rack (2.0.5)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
