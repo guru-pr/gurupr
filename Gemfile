@@ -103,7 +103,7 @@ group :test do
   gem 'chromedriver-helper'
   # https://stackoverflow.com/q/51762108
   gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'shoulda'
 
