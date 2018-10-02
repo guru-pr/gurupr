@@ -14,7 +14,7 @@ RSpec.describe ProfilesController, type: :controller do
       it 'needs to be success' do
         get :show
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
 
       it 'assigns user as current_user' do
@@ -34,7 +34,7 @@ RSpec.describe ProfilesController, type: :controller do
       it 'needs to be success' do
         get :edit, xhr: true
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
 
       it 'assigns user as current_user' do
@@ -66,7 +66,7 @@ RSpec.describe ProfilesController, type: :controller do
       it 'needs to be success' do
         patch :update, params: valid_params, xhr: true
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
 
       it 'updates the current user with provided params' do
