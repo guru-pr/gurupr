@@ -183,7 +183,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
     pdf-core (0.7.0)
-    pg (0.21.0)
+    pg (1.1.3)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
@@ -353,7 +353,7 @@ DEPENDENCIES
   mini_racer
   nokogiri (>= 1.8.2)
   omniauth-github
-  pg (~> 0.21)
+  pg (~> 1.1)
   prawn
   puma (~> 3.11)
   rails (~> 5.2.0.beta2)
