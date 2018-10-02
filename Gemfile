@@ -101,7 +101,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'database_cleaner'
+  # https://stackoverflow.com/q/51762108
+  gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
