@@ -42,7 +42,7 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'redcarpet', '~> 3.4.0'
-gem 'slim', '~> 3.0.1'
+gem 'slim', '~> 4.0'
 
 gem 'activemodel-serializers-xml'
 
