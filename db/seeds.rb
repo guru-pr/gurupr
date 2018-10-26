@@ -5,7 +5,7 @@ User.create do |u|
   u.name = 'Jane Doe'
   u.email = 'jane@doe.com'
   u.nickname = 'jane'
-  u.image = 'http://robohash.org/6R7.png'
+  u.image = 'https://robohash.org/6R7.png'
 end
 
 # normal user
@@ -15,7 +15,7 @@ User.create do |u|
   u.name = 'John Doe'
   u.email = 'john@doe.com'
   u.nickname = 'jdoe'
-  u.image = 'http://robohash.org/R91.png'
+  u.image = 'https://robohash.org/R91.png'
 end
 
 # A event in the future (1 month from now)
