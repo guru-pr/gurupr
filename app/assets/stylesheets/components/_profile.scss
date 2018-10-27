@@ -1,14 +1,7 @@
-$min-form-margin: 98%;
-
 @mixin border-n-shadow() {
   border-radius: 3px;
   box-shadow: 1px 1px 2px #888888;
   border-bottom: 2px solid $primary-color;
-}
-
-.profile-form {
-  width: $min-form-margin;
-  margin-left: 3px;
 }
 
 .admin-text {
@@ -30,13 +23,15 @@ $min-form-margin: 98%;
 }
 
 .centered-card-profile {
+  background-color: #f8fafd;
+  border-radius: 3px;
+  border-bottom: 2px solid #cc342d;
+  height: 340px;
+  left: 50%;
+  padding: 5px;
   position: relative;
   top: 50%;
-  left: 50%;
   width: 300px;
-  background-color: #f8fafd;
-  height: 340px;
-  padding-top: 8px;
 
   @include border-n-shadow;
 
@@ -102,15 +97,8 @@ $min-form-margin: 98%;
 }
 
 .line-button {
-  bottom: 10px;
-  position: absolute;
-  width: 100%;
-}
+  width: 97%;
 
-.btn-profile-edit {
-  width: $min-form-margin;
-}
-
-#profile_fields {
-  font-size: $unit-font-size;
+  position: fixed;
+  bottom: 6px;
 }
