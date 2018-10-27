@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.3.5'
 
-gem 'faker'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record

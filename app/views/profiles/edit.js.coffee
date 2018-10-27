@@ -1,5 +1,5 @@
 $('#profile_fields').remove();
 
-var $form = "<%= j render 'form' %>";
+$form = "<%= j render 'form' %>";
 
 $('.centered-card-profile').append($form);

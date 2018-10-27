@@ -4,7 +4,7 @@ pt-BR:
       title: Minha Conta
       subtitle: Modifique suas informações pessoais
       certificates_title: Meus Certificados
-      no_certificates_html: "<p class=\"text-center\">Você não possui nenhum certificado!</p>"
+      no_certificates_html: "<div class=\"text-center\">Você não possui nenhum certificado!</div>"
     fields:
       edit: Editar
     form:

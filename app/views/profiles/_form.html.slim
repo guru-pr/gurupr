@@ -8,4 +8,6 @@
         = fa_icon 'lock', text: t('.admin')
 
     = f.input :name, required: true
-    = f.submit t('.save'), class: 'btn-add btn-small btn-block'
+
+    .line-button.text-center
+      = f.submit t('.save'), class: 'btn-add btn-small btn-block'
