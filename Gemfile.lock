@@ -379,7 +379,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 2.3.5p376
+   ruby 2.5.3p105
 
 BUNDLED WITH
-   1.16.5
+   1.17.0
