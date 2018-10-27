@@ -1,5 +1,5 @@
 $('#edit_profile').remove();
 
-var $fields = "<%= j render 'fields' %>";
+$fields = "<%= j render 'fields' %>";
 
 $('.centered-card-profile').append($fields);
