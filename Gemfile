@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '>= 5.2.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
@@ -70,7 +70,7 @@ gem 'prawn'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'nokogiri', '>= 1.8.2'
+gem 'nokogiri', '>= 1.8.5'
 gem 'listen'
 
 group :development, :test do
@@ -113,3 +113,5 @@ group :production do
   # The twelve-factor app
   gem 'rails_12factor'
 end
+gem 'activestorage', '>= 5.2.1.1'
+gem 'loofah', '>= 2.2.3'
