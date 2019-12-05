@@ -191,7 +191,8 @@ GEM
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -359,7 +360,7 @@ DEPENDENCIES
   omniauth-github
   pg (~> 1.1)
   prawn
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (>= 5.2.1.1)
   rails-i18n (~> 5.0)
   rails_12factor
